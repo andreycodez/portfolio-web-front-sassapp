@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML Navigation</title>
+    <style>
+        header {padding: 0 30px;}
+
+        .top-nav {background-color: #e5e5e5; padding: 30px;}
+        .top-nav a {margin-right: 20px; color: #000000}
+        .top-nav a:hover {text-decoration: none;}
+
+        section {
+            height: 500px;
+            background-color:cornflowerblue;
+            color: #333;
+            padding: 0 30px;
+        }
+        footer {background-color: #e5e5e5; padding: 30px; margin-top: 100px; text-align: center;}
+    </style>
+</head>
+<body>
+<nav id="toTop" class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="col1.html">Collection1</a>
+    <a href="col2.html">Collection2</a>
+    <a href="col3.html">Collection3</a>
+    <a href="newVideo.html">New Video</a>
+</nav>
+<header >
+    <h1>Add New Video</h1>
+</header>
+<section>
+    <label for="videoTitle"><strong>Video Title</strong></label><br>
+    <input type="videoTitle"><br><br>
+    <br><br>
+    <label for="comments"><strong>Description</strong></label><br>
+    <textarea name="comments" rows="8" cols="40">
+              Text area content...
+            </textarea><br>
+    <label for="video"><strong>Video</strong></label>
+    <input type="file" placeholder="Choose File"><br>
+    <input name="public" id="public" type="radio" value="public">
+    <label for="public">Public</label><br>
+    <input name="private" id="private" type="radio" value="private">
+    <label for="private">Private</label><br><br>
+    <input type="file" placeholder="Upload Video">
+    <br>
+</section>
+
+<footer>
+    <p>Footer</p>
+</footer>
+</body>
+</html>
