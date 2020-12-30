@@ -1,0 +1,66 @@
+.paginator-container
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: 1fr
+  grid-template-rows: 100px
+  align-items: end
+  justify-items: center
+.paginator
+  display: grid
+  grid-template-columns: 85px min-content 80px
+  a
+    color: #4285f4
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+.forward
+  display: grid
+  grid-template-columns: 71px 1fr
+  .background
+    grid-column: 1 / span 1
+    grid-row: 1 / span 1
+    background: url('../images/google.webp') no-repeat
+    background-position: -96px 0
+    width: 71px
+    height: 37px
+    justify-self: start
+  .link-holder
+    grid-column: 1 / span 2
+    grid-row: 2 / span 1
+    justify-self: end
+
+.backward
+  display: grid
+  grid-template-columns: 1fr 53px
+  .background
+    grid-column: 2 / span 1
+    background: url('../images/google.webp') no-repeat
+    background-position: 0 0
+    width: 53px
+    height: 37px
+    justify-self: end
+  .link-holder
+    grid-column: 1 / span 2
+    grid-row: 2 / span 1
+    justify-self: start
+.pagination-links
+  list-style-type: none
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: repeat(auto-fit, 20px)
+
+.pagination-links > li
+  text-align: center
+
+.pagination-list-item-back-ground
+  width: 20px
+  height: 37px
+  text-align: center
+  background: url('../images/google.webp') no-repeat
+  background-position: -74px 0
+
+
+.pagination-links > li.active .pagination-list-item-back-ground
+  background: url('../images/google.webp') no-repeat
+  background-position: -53px 0

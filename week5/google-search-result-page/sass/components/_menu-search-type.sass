@@ -1,0 +1,51 @@
+.menu-search-type
+  grid-column: 1 / span 5
+  border-bottom: 1px solid #EBEBEB
+  display: grid
+  grid-template-columns: 170px 700px 1fr
+  grid-template-rows: 28px
+
+.menu-search-type-container
+  grid-column: 2 / span 1
+  display: grid
+  grid-template-columns: min-content auto 30px
+
+.menu-search-type-item-list
+  grid-column: 1 / span 1
+  width: auto
+  list-style-type: none
+  display: inline-grid
+  grid-template-columns: min-content min-content min-content min-content min-content
+  grid-template-rows: 1fr
+
+  a
+    display: inline-block
+    color: #5f6368
+    padding: 0 30px 10px 15px
+    text-decoration: none
+    &:hover, &:active
+      border-bottom: 3px solid #1A73E8
+      text-decoration: none
+  a.active
+    border-bottom: 3px solid #1A73E8
+.menu-search-type-item
+  white-space: nowrap
+  span
+    float: left
+    padding-right: 8px
+
+.menu-search-type-submenu
+  grid-column: 2 / span 1
+  display: inline-block
+  justify-self: end
+
+
+.menu-search-type-submenu-list
+  width: 100%
+  display: grid
+  grid-template-columns: min-content min-content
+  list-style-type: none
+  grid-gap: 20px
+
+.menu-search-type-submenu-list
+  justify-self: end
