@@ -1,0 +1,30 @@
+.container {
+    display: grid; /*or inline-grid*/
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    column-gap: 10px;
+    row-gap: 2px;
+    gap: 10px 20px;
+    justify-items: stretch;
+    align-items: stretch;
+    place-items: stretch stretch;
+    justify-content: stretch;
+}
+
+.header {
+    background-color: orange;
+    grid-column-start: 1;
+}
+
+.main {
+    background-color: blue;
+}
+
+.sidebar {
+    background-color: red;
+}
+
+.footer {
+    background-color: green;
+}
+
