@@ -1,0 +1,30 @@
+.no-text-decoration
+  text-decoration: none
+
+.button
+  display: grid
+  grid-template-columns: 30px 1fr 30px
+  grid-auto-flow: column
+  grid-auto-columns: min-content
+  white-space: nowrap
+  color: $text-color-white
+  font-size: 12px
+  background-color: $main-color-blue
+  height: 30px
+  text-decoration: none
+  border-radius: 20px
+  align-content: center
+  span
+    grid-column: 2 / span 1
+    margin-right: 5px
+
+.button-with-icon
+  padding: 10px 15px
+  span.ico
+    margin-right: 5px
+    i
+      font-size: 6px
+      color: $main-color-blue
+      background-color: $text-color-white
+      padding: 3px 3px 3px 4px
+      border-radius: 50%
