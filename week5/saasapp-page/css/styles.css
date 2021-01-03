@@ -16,13 +16,44 @@ body {
   grid-template-columns: minmax(30px, 1fr) minmax(964px, 1fr) minmax(30px, 1fr);
   grid-auto-flow: row; }
 
+.no-text-decoration {
+  text-decoration: none; }
+
+.button {
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
+  white-space: nowrap;
+  color: #FFFFFF;
+  font-size: 12px;
+  background-color: #2576FF;
+  height: 30px;
+  text-decoration: none;
+  border-radius: 20px;
+  align-content: center; }
+  .button span {
+    grid-column: 2/span 1;
+    margin-right: 5px; }
+
+.button-with-icon {
+  padding: 10px 15px; }
+  .button-with-icon span.ico {
+    margin-right: 5px; }
+    .button-with-icon span.ico i {
+      font-size: 6px;
+      color: #2576FF;
+      background-color: #FFFFFF;
+      padding: 3px 3px 3px 4px;
+      border-radius: 50%; }
+
 .preheader {
   grid-column: 2/span 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-size: 12px;
   color: #677788;
-  height: 30px; }
+  height: 50px; }
 
 .preheader-left-side {
   grid-column: 1/span 1;
@@ -30,7 +61,7 @@ body {
 
 .preheader-left-side-menu {
   list-style-type: none;
-  padding-left: 20px; }
+  padding-left: 5px; }
   .preheader-left-side-menu a {
     color: #677788;
     text-decoration: none; }
@@ -51,7 +82,7 @@ body {
   list-style-type: none;
   display: grid;
   grid-auto-flow: column;
-  padding-right: 20px; }
+  padding-right: 5px; }
 
 .preheader-right-side-menu li {
   margin-left: 20px; }
@@ -77,7 +108,7 @@ body {
 .header-logo-section {
   grid-column: 1/span 1; }
   .header-logo-section img {
-    width: 150px; }
+    width: 100px; }
 
 .header-top-menu {
   grid-column: 2/span 1;
@@ -104,16 +135,31 @@ body {
 .header-top-menu-buy-button {
   align-self: center;
   justify-self: end; }
-  .header-top-menu-buy-button a {
-    color: #FFFFFF;
-    font-size: 12px;
-    background-color: #2576FF;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 20px; }
 
 .jumbotron {
   grid-column: 2/span 1;
-  grid-row: 3/span 1; }
+  grid-row: 3/span 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+  grid-template-rows: 440px;
+  position: relative;
+  top: 120px; }
+
+.jumbotron-headline > .title {
+  font-size: 40px;
+  width: 300px;
+  font-weight: 500;
+  color: #000000; }
+
+.jumbotron-headline > .subtext {
+  margin-top: 10px;
+  width: 250px;
+  color: #677788; }
+
+.jumbotron-headline > .actions {
+  margin-top: 30px;
+  width: 250px;
+  color: #677788; }
 
 /*# sourceMappingURL=styles.css.map */
