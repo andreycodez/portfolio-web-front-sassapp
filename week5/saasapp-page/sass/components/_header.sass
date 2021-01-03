@@ -1,3 +1,50 @@
 .header
   grid-column: 2 / span 1
   grid-row: 2 / span 1
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: 300px 1fr 100px
+  gap: 30px
+
+.header-logo-section
+  grid-column: 1 / span 1
+  img
+    width: 150px
+
+.header-top-menu
+  grid-column: 2 / span 1
+  justify-self: end
+  align-self: center
+
+.header-top-menu-list
+  display: grid
+  grid-auto-flow: column
+  grid-auto-columns: min-content
+  list-style-type: none
+
+
+.header-top-menu-list > li
+  white-space: nowrap
+  margin-left: 20px
+
+.header-top-menu-list > li > a
+  font-size: 14px
+  color: $text-color-regular
+  text-decoration: none
+  &:hover, &:active
+    color: $main-color-blue
+
+.header-top-menu-buy-button
+  align-self: center
+  justify-self: end
+  a
+    color: $text-color-white
+    font-size: 12px
+    background-color: $main-color-blue
+    padding: 10px 20px
+    text-decoration: none
+    border-radius: 20px
+
+
+
+
