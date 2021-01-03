@@ -24,42 +24,42 @@ body {
   color: #677788;
   height: 30px; }
 
-.left-side {
+.preheader-left-side {
   grid-column: 1/span 1;
   align-self: center; }
 
-.left-side-menu {
+.preheader-left-side-menu {
   list-style-type: none; }
-  .left-side-menu a {
+  .preheader-left-side-menu a {
     color: #677788;
     text-decoration: none; }
-    .left-side-menu a:hover {
+    .preheader-left-side-menu a:hover {
       border-bottom: 1px solid #677788; }
 
-.left-side-menu li:before {
+.preheader-left-side-menu li:before {
   content: "<";
   padding-right: 5px;
   font-weight: bold; }
 
-.right-side {
+.preheader-right-side {
   grid-column: 2/span 1;
   justify-self: end;
   align-self: center; }
 
-.right-side-menu {
+.preheader-right-side-menu {
   list-style-type: none;
   display: grid;
   grid-auto-flow: column; }
 
-.right-side-menu li {
+.preheader-right-side-menu li {
   margin-left: 20px; }
-  .right-side-menu li a {
+  .preheader-right-side-menu li a {
     color: #677788;
     text-decoration: none; }
-    .right-side-menu li a:hover {
+    .preheader-right-side-menu li a:hover {
       border-bottom: 1px solid #677788; }
 
-.right-side-menu li:after {
+.preheader-right-side-menu li:after {
   font-size: 9px;
   content: "▼";
   padding-left: 5px; }
