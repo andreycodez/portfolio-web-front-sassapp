@@ -21,31 +21,28 @@ body {
 
 .button {
   display: grid;
-  grid-template-columns: 30px 1fr 30px;
+  grid-template-columns: 20px 1fr 20px;
   grid-auto-flow: column;
   grid-auto-columns: min-content;
   white-space: nowrap;
   color: #FFFFFF;
   font-size: 12px;
+  font-weight: normal;
   background-color: #2576FF;
-  height: 30px;
+  height: 44px;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 22px;
   align-content: center; }
   .button span {
-    grid-column: 2/span 1;
-    margin-right: 5px; }
-
-.button-with-icon {
-  padding: 10px 15px; }
-  .button-with-icon span.ico {
-    margin-right: 5px; }
-    .button-with-icon span.ico i {
-      font-size: 6px;
-      color: #2576FF;
+    grid-column-start: 2;
+    grid-column-end: span 1; }
+    .button span i {
+      margin-right: 12px;
       background-color: #FFFFFF;
-      padding: 3px 3px 3px 4px;
-      border-radius: 50%; }
+      color: #2576FF;
+      padding: 4px;
+      border-radius: 50%;
+      font-size: 10px; }
 
 .preheader {
   grid-column: 2/span 1;
@@ -102,7 +99,7 @@ body {
   grid-row: 2/span 1;
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 300px 1fr 100px;
+  grid-template-columns: 300px 1fr min-content;
   gap: 30px; }
 
 .header-logo-section {
@@ -148,18 +145,28 @@ body {
 
 .jumbotron-headline > .title {
   font-size: 40px;
+  font-weight: bold;
   width: 300px;
-  font-weight: 500;
   color: #000000; }
 
 .jumbotron-headline > .subtext {
   margin-top: 10px;
+  line-height: 24px;
   width: 250px;
   color: #677788; }
 
 .jumbotron-headline > .actions {
   margin-top: 30px;
-  width: 250px;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  align-items: center;
+  gap: 30px;
   color: #677788; }
+  .jumbotron-headline > .actions a {
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #2576FF; }
 
 /*# sourceMappingURL=styles.css.map */
