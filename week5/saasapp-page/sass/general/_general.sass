@@ -1,5 +1,6 @@
-.no-text-decoration
+.no-text-decoration, a.no-text-decoration:hover
   text-decoration: none
+  border-bottom: none
 
 .button
   display: grid
@@ -19,9 +20,11 @@
     grid-column-start: 2
     grid-column-end: span 1
     i
+      display: block
       margin-right: 12px
       background-color: $text-color-white
       color: $main-color-blue
-      padding: 4px
+      padding: 3px
       border-radius: 50%
-      font-size: 10px
+      font-size: 8px
+      line-height: 12px
