@@ -1,7 +1,3 @@
-.no-text-decoration, a.no-text-decoration:hover
-  text-decoration: none
-  border-bottom: none
-
 .button
   display: grid
   grid-template-columns: 20px 1fr 20px
@@ -17,14 +13,26 @@
   border-radius: 22px
   align-content: center
   span
-    grid-column-start: 2
-    grid-column-end: span 1
-    i
-      display: block
-      margin-right: 12px
+    grid-column: 2 / span 1
+  .icon-text-container
+    grid-column: 2 / span 1
+    display: grid
+    grid-template-columns: min-content min-content
+    grid-auto-flow: column
+    align-items: center
+    gap: 15px
+    .icon-container
       background-color: $text-color-white
       color: $main-color-blue
       padding: 3px
       border-radius: 50%
-      font-size: 8px
-      line-height: 12px
+      display: grid
+      align-items: center
+      justify-items: center
+      i
+        margin: 1px 0 0 1px
+        grid-column: 1 / span 1
+        font-size: 8px
+
+
+
