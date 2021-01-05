@@ -4,12 +4,19 @@
   display: grid
   grid-auto-flow: column
   grid-template-columns: 300px 1fr min-content
+  align-items: center
   gap: 30px
 
 .header-logo-section
   grid-column: 1 / span 1
-  img
-    width: 100px
+  a
+    display: grid
+    grid-template-columns: min-content
+    img
+      grid-column: 1 / span 1
+      width: 100px
+      align-self: center
+
 
 .header-top-menu
   grid-column: 2 / span 1
