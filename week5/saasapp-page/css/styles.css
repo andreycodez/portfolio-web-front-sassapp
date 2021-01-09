@@ -48,7 +48,8 @@ h3 {
   border-radius: 22px;
   align-content: center; }
   .button span {
-    grid-column: 2/span 1; }
+    grid-column: 2/span 1;
+    font-weight: normal; }
   .button .icon-text-container {
     grid-column: 2/span 1;
     display: grid;
@@ -65,9 +66,12 @@ h3 {
       align-items: center;
       justify-items: center; }
       .button .icon-text-container .icon-container i {
-        margin: 1px 0 0 1px;
         grid-column: 1/span 1;
         font-size: 8px; }
+      .button .icon-text-container .icon-container .video {
+        margin: 2px 0 0 2px; }
+    .button .icon-text-container span {
+      font-weight: bold; }
 
 .preheader {
   grid-column: 2/span 1;
