@@ -3,9 +3,13 @@
   margin: 0;
   padding: 0; }
 
+html, body {
+  height: 100%; }
+
 body {
-  font-family: "Arial", san-serif;
-  font-size: 16px; }
+  font-family: "Arial", serif;
+  font-size: 16px;
+  padding-bottom: 60px; }
 
 .top-section {
   width: 100%;
@@ -39,6 +43,9 @@ a {
   font-weight: bold;
   text-decoration: none;
   color: #2576FF; }
+
+a.underlined:hover {
+  border-bottom: 1px solid #2576FF; }
 
 .button {
   display: grid;
@@ -311,8 +318,7 @@ a {
     background-color: #00C9A7;
     border-radius: 10px; }
   .key-benefit-card .subtext {
-    line-height: 24px; }
-  .key-benefit-card .regular-link {
-    margin-top: 20px; }
+    line-height: 24px;
+    margin-bottom: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
