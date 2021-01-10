@@ -63,7 +63,7 @@ a {
     grid-template-columns: min-content min-content;
     grid-auto-flow: column;
     align-items: center;
-    gap: 15px; }
+    gap: 10px; }
     .button .icon-text-container .icon-container {
       background-color: #FFFFFF;
       color: #2576FF;
@@ -97,7 +97,9 @@ a {
   padding-left: 5px; }
   .preheader-left-side-menu a {
     color: #677788;
-    text-decoration: none; }
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 12px; }
     .preheader-left-side-menu a:hover {
       border-bottom: 1px solid #677788; }
 
@@ -121,7 +123,9 @@ a {
   margin-left: 20px; }
   .preheader-right-side-menu li a {
     color: #677788;
-    text-decoration: none; }
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 12px; }
     .preheader-right-side-menu li a:hover {
       border-bottom: 1px solid #677788; }
 
