@@ -33,6 +33,13 @@ h3 {
 .subtext {
   color: #677788; }
 
+a {
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2576FF; }
+
 .button {
   display: grid;
   grid-template-columns: 20px 1fr 20px;
@@ -277,6 +284,30 @@ h3 {
   text-align: center; }
 
 .key-benefits-cards-container {
-  grid-column: 2/span 1; }
+  margin: 60px 0 60px 0;
+  grid-column: 2/span 1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px; }
+
+.key-benefit-card {
+  border: 1px solid #e2e2e2;
+  padding: 20px; }
+  .key-benefit-card img {
+    display: block;
+    width: 70px; }
+  .key-benefit-card h3 {
+    margin: 20px 0 20px 0;
+    display: inline-block; }
+  .key-benefit-card span.tech {
+    color: #FFFFFF;
+    padding: 5px 10px;
+    background-color: #00C9A7;
+    border-radius: 10px; }
+  .key-benefit-card .subtext {
+    line-height: 24px; }
+  .key-benefit-card .regular-link {
+    margin-top: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
