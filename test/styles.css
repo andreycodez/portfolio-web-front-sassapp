@@ -1,0 +1,363 @@
+body {
+    position: relative;
+    margin: 0;
+}
+.logo-circle {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    background: rgba(250, 133, 0, 0.8);
+    font-family: cursive;
+}
+
+.nav > .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 20px;
+}
+
+.nav > .container > .logo {
+    margin-left: 20px;
+}
+
+.nav > .container > .logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.nav > .container > .logo a {
+    padding-left: 10px;
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav > .container a {
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav > .container a:hover {
+    color: #000;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #999496, 0 0 40px #999496, 0 0 50px #999496, 0 0 60px #999496, 0 0 70px #999496;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #797778, 0 0 40px #797778, 0 0 50px #797778, 0 0 60px #797778, 0 0 70px #797778, 0 0 80px #797778;
+    }
+}
+
+.nav > .container > .main_list {
+
+    margin-right: 20px;
+}
+
+.nav > .container > .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul.navlinks {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    float: right;
+}
+
+ul.navlinks > li {
+    padding-left: 10px;
+}
+
+/*
+    Content CSS
+*/
+.content {
+    /* height: 1000px; */
+    margin-bottom: -350px;
+    padding-top: 75px;
+}
+
+.content > ul.content-row {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.aboutus {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+}
+
+.aboutus > li:nth-child(1) {
+    font-size: 4em;
+}
+
+.aboutus > li:nth-child(2) {
+    max-width: 600px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 75px;
+
+}
+
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    padding: 9;
+    margin: 0;
+}
+
+
+.ourteam {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.ourteam > li {
+    text-align: center;
+}
+
+.ourteam > li:nth-child(1) {
+    font-size: 2em;
+}
+
+.ourteam > li:nth-child(2) > div {
+    max-width: 375px;
+    text-align: center;
+}
+
+.ourteam-gallery-container {
+    /* border: 1px solid green;     */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.ourteam-gallery {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.gallery-item > li > img {
+    width: 200px;
+    height: 100px;
+}
+
+li.corporate-leader > .person > img {
+    width: 75px;
+    height: 95px;
+    padding: 15px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+}
+
+li.corporate-leader {
+    text-align: center;
+    font-size: 0.7em;
+}
+/*
+    Footer CSS
+*/
+
+.footer {
+    /* display: none; */
+    background-color: #282828;
+    color: #777;
+    /* height: 325px; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+/* .footer, .content:after {
+    height: 402px;
+} */
+
+.footer-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.company-address, .email, .phone-numbers, .copyright {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-address > ul.company-hq {
+    list-style: none;
+    text-align: center;
+}
+
+.company-address > ul.company-hq > li:nth-child(1) {
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 20px;
+}
+
+.company-address > ul.company-hq > li {
+    padding: 5px;
+}
+
+.email > ul.email-hq {
+    list-style: none;
+    text-align: center;
+}
+
+.email > ul.email-hq > li:nth-child(1) {
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 20px;
+}
+
+.email > ul.email-hq > li {
+    padding: 5px;
+}
+
+.phone-numbers > ul.phone-hq {
+    list-style: none;
+    text-align: center;
+}
+
+.phone-numbers > ul.phone-hq > li:nth-child(1) {
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 20px;
+}
+
+.phone-numbers > ul.phone-hq > li {
+    padding: 5px;
+}
+
+.copyright > ul.copyright-footer {
+    list-style: none;
+    text-align: center;
+    /* padding-top: 50px; */
+}
+
+.copyright > ul.copyright-footer > li {
+    padding: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+        margin:10px;
+    }
+
+    .nav > .container  {
+        flex-direction: column;
+    }
+
+    ul.navlinks {
+        flex-direction: column;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .aboutus {
+        padding: 0px;
+    }
+
+    .gallery {
+        padding: 0;
+    }
+
+    .ourteam {
+        padding: 0;
+    }
+
+    .ourteam-gallery-container {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .ourteam-gallery {
+        flex-direction: column;
+    }
+
+    .footer {
+        display: none;
+    }
+}
