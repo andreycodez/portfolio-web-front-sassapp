@@ -49,6 +49,12 @@ a {
 a.underlined:hover {
   border-bottom: 1px solid #2576FF; }
 
+.mt-40 {
+  margi-top: 40px; }
+
+.pt-40 {
+  padding-top: 40px; }
+
 .button {
   display: grid;
   grid-template-columns: 20px 1fr 20px;
@@ -91,12 +97,6 @@ a.underlined:hover {
         margin: 2px 0 0 2px; }
     .button .icon-text-container span {
       font-weight: bold; }
-
-.mt-40 {
-  margi-top: 40px; }
-
-.pt-40 {
-  padding-top: 40px; }
 
 .preheader {
   grid-column: 2/span 1;
