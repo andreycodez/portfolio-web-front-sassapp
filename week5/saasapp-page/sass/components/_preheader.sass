@@ -18,13 +18,21 @@
     text-decoration: none
     font-weight: normal
     font-size: 12px
+    width: min-content
     &:hover
       border-bottom: 1px solid $text-color-regular
+  li
+    display: grid
+    grid-template-columns: min-content
+    grid-auto-flow: column
+    gap: 10px
+    i
+      padding-top: 1px
 
-.preheader-left-side-menu li:before
-  content: '\003C'
-  padding-right: 5px
-  font-weight: bold
+//.preheader-left-side-menu li:before
+//  content: '\003C'
+//  padding-right: 5px
+//  font-weight: bold
 
 .preheader-right-side
   grid-column: 2 / span 1
@@ -39,6 +47,12 @@
 
 .preheader-right-side-menu li
   margin-left: 20px
+  display: grid
+  grid-template-columns: min-content
+  grid-auto-flow: column
+  gap: 10px
+  i
+    padding-top: 1px
   a
     color: #677788
     text-decoration: none
@@ -47,7 +61,7 @@
     &:hover
       border-bottom: 1px solid $text-color-regular
 
-.preheader-right-side-menu li:after
-  font-size: 9px
-  content: "\25BC"
-  padding-left: 5px
+//.preheader-right-side-menu li:after
+//  font-size: 9px
+//  content: "\25BC"
+//  padding-left: 5px
