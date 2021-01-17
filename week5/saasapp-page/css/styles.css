@@ -93,7 +93,6 @@ a.underlined:hover {
       align-items: center;
       justify-content: center; }
       .button .button-content-holder span.icon-background i {
-        padding-top: 1px;
         font-size: 8px; }
 
 .preheader {
@@ -357,5 +356,9 @@ a.underlined:hover {
   justify-self: end; }
   .banner-one-image img {
     height: 360px; }
+
+.play-icon {
+  padding-top: 1px;
+  padding-left: 2px; }
 
 /*# sourceMappingURL=styles.css.map */
