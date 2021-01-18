@@ -1,0 +1,53 @@
+.why-front-bullets-list
+  display: grid
+  grid-template-columns: auto
+  grid-auto-flow: column
+  .why-front-bullet-item:first-child > .bullet:before,
+  .why-front-bullet-item:last-child > .bullet:after
+    content: unset
+
+.why-front-bullet-item
+  display: flex
+  flex-direction: column
+  .bullet
+    display: grid
+    grid-template-columns: 1fr min-content 1fr
+    gap: 6px
+    &::before
+      align-self: center
+      content: ""
+      grid-column: 1 / span 1
+      height: 1px
+      width: 100%
+      background-color: #E6E9F2
+    &::after
+      align-self: center
+      content: ""
+      grid-column: 3 / span 1
+      width: 100%
+      height: 1px
+      background-color: #E6E9F2
+    .bullet-inner
+      grid-column: 2 / span 1
+      width: 50px
+      height: 50px
+      background-color: #ECF2FF
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      .dot
+        width: 5px
+        height: 5px
+        background-color: #0066FF
+        border-radius: 50%
+  span
+    margin-top: 20px
+    text-align: center
+
+.why-front-image
+  display: grid
+  grid-template-columns: 30px auto 30px
+  img
+    grid-column: 2 / span 1
+    width: 100%
