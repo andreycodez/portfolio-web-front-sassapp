@@ -61,6 +61,15 @@ a.underlined:hover {
 .mt-60 {
   margin-top: 60px; }
 
+.mt-80 {
+  margin-top: 80px; }
+
+.mt-100 {
+  margin-top: 100px; }
+
+.mt-200 {
+  margin-top: 200px; }
+
 .pt-40 {
   padding-top: 40px; }
 
@@ -431,5 +440,50 @@ a.underlined:hover {
   .why-front-image img {
     grid-column: 2/span 1;
     width: 100%; }
+
+.hubspot-container {
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: 80px; }
+
+.hubspot-image {
+  position: relative;
+  width: 480px;
+  height: 540px;
+  background: url("../images/people/woman_three.jpg") no-repeat;
+  background-size: 100%;
+  left: -30px;
+  overflow: visible;
+  border-radius: 5px; }
+
+.hubspot-hover-image {
+  position: absolute;
+  max-width: 200px;
+  left: -50px;
+  bottom: -50px;
+  z-index: -1; }
+
+.hubspot-text {
+  align-self: center; }
+
+.hubspot-text {
+  font-size: 22px; }
+  .hubspot-text p {
+    padding-top: 20px;
+    line-height: 36px; }
+  .hubspot-text img.hubspot-logo {
+    width: 100px; }
+
+.hubspot-employee-info {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column; }
+  .hubspot-employee-info .employee-name {
+    font-size: 18px;
+    font-weight: bold; }
+  .hubspot-employee-info .employee-job {
+    padding-top: 5px;
+    font-size: 14px;
+    color: #5f6368; }
 
 /*# sourceMappingURL=styles.css.map */
