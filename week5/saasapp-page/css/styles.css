@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0; }
@@ -64,6 +65,18 @@ body {
   display: grid;
   gap: 30px; }
 
+.employee-info {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column; }
+  .employee-info .employee-name {
+    font-size: 18px;
+    font-weight: bold; }
+  .employee-info .employee-job {
+    padding-top: 5px;
+    font-size: 14px;
+    color: #5f6368; }
+
 h1, h2, h3 {
   font-weight: bold;
   color: #000000;
@@ -72,8 +85,11 @@ h1, h2, h3 {
 h1 {
   font-size: 40px; }
 
-h2 {
+h2, h2.hire-us {
   font-size: 26px; }
+
+h2.hire-us {
+  color: #FFFFFF; }
 
 h2.secondary {
   font-weight: normal;
@@ -517,18 +533,6 @@ a.underlined:hover {
   .hubspot-text img.hubspot-logo {
     width: 100px; }
 
-.hubspot-employee-info {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column; }
-  .hubspot-employee-info .employee-name {
-    font-size: 18px;
-    font-weight: bold; }
-  .hubspot-employee-info .employee-job {
-    padding-top: 5px;
-    font-size: 14px;
-    color: #5f6368; }
-
 .trusted-container {
   display: grid;
   grid-auto-flow: column;
@@ -571,5 +575,109 @@ a.underlined:hover {
     font-size: 12px; }
   .main-plan-content a {
     margin-top: 40px; }
+
+.section-with-background {
+  background-color: #20335B; }
+
+.hire-us-form {
+  padding: 50px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 160px; }
+  .hire-us-form .description > .subtext {
+    color: #BDC2CE;
+    font-size: 14px; }
+  .hire-us-form .employee-info {
+    margin-top: 30px; }
+    .hire-us-form .employee-info .employee-job {
+      color: #BDC2CE; }
+  .hire-us-form .photo-stack {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: 60px;
+    gap: 20px; }
+    .hire-us-form .photo-stack img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      justify-self: flex-start;
+      align-self: center; }
+      .hire-us-form .photo-stack img:hover {
+        width: 60px;
+        height: 60px; }
+
+.reversed-color {
+  color: #FFFFFF; }
+
+.reversed-background {
+  color: #FFFFFF; }
+
+.bottom-divider {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #BDC2CE;
+  margin-bottom: 30px; }
+
+q {
+  display: inline-block;
+  quotes: "“" "”";
+  font-style: oblique;
+  max-width: 300px; }
+  q:before {
+    content: open-quote; }
+  q:after {
+    content: close-quote; }
+
+.form {
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 5px; }
+
+.form-container > form {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; }
+  .form-container > form input.input-field {
+    height: 40px;
+    max-width: 100%;
+    grid-column: span 1;
+    padding: 0 10px;
+    outline: none;
+    border: 1px solid #E6E8F2;
+    border-radius: 3px; }
+  .form-container > form textarea {
+    grid-column: span 2;
+    padding: 10px;
+    border: 1px solid #E6E8F2;
+    border-radius: 3px;
+    font-size: 14px; }
+  .form-container > form .privacy-policy {
+    margin-top: 10px;
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 20px 1fr; }
+    .form-container > form .privacy-policy a {
+      text-decoration: none;
+      color: #677788;
+      border-bottom: 1px dashed #677788; }
+  .form-container > form .submit-button {
+    margin-top: 20px;
+    grid-column: span 2;
+    height: 40px;
+    background-color: #2576FF;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: bold; }
+  .form-container > form .select-field {
+    height: 40px;
+    max-width: 100%;
+    padding: 0 10px;
+    grid-column: span 1;
+    border: 1px solid #E6E8F2;
+    border-radius: 3px; }
+  .form-container > form .checkbox-field {
+    outline: 1px solid #E6E8F2; }
 
 /*# sourceMappingURL=styles.css.map */
