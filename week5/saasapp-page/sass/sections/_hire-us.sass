@@ -1,0 +1,107 @@
+.section-with-background
+  background-color: #20335B
+
+.hire-us-form
+  padding: 50px
+  display: grid
+  grid-auto-flow: column
+  gap: 160px
+  .description > .subtext
+    color: #BDC2CE
+    font-size: 14px
+  .employee-info
+    margin-top: 30px
+    .employee-job
+      color: #BDC2CE
+  .photo-stack
+    display: grid
+    grid-template-columns: repeat(3, 60px)
+    grid-template-rows: 60px
+    gap: 20px
+    img
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      justify-self: flex-start
+      align-self: center
+      &:hover
+        width: 60px
+        height: 60px
+.reversed-color
+  color: #FFFFFF
+
+.reversed-background
+  color: #FFFFFF
+
+.bottom-divider
+  padding-bottom: 30px
+  border-bottom: 1px solid #BDC2CE
+  margin-bottom: 30px
+
+q
+  display: inline-block
+  quotes: "\201c" "\201d"
+  font-style: oblique
+  max-width: 300px
+  &:before
+    content: open-quote
+  &:after
+    content: close-quote
+
+.form
+  background-color: #FFFFFF
+  padding: 30px
+  border-radius: 5px
+
+.form-container > form
+  margin-top: 20px
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 20px
+  input.input-field
+    height: 40px
+    max-width: 100%
+    grid-column: span 1
+    padding: 0 10px
+    outline: none
+    border: 1px solid #E6E8F2
+    border-radius: 3px
+  textarea
+    grid-column: span 2
+    padding: 10px
+    border: 1px solid #E6E8F2
+    border-radius: 3px
+    font-size: 14px
+  .privacy-policy
+    margin-top: 10px
+    grid-column: span 2
+    display: grid
+    grid-template-columns: 20px 1fr
+    a
+      text-decoration: none
+      color: $text-color-regular
+      border-bottom: 1px dashed $text-color-regular
+  .submit-button
+    margin-top: 20px
+    grid-column: span 2
+    height: 40px
+    background-color: $main-color-blue
+    outline: none
+    border: none
+    border-radius: 5px
+    color: #FFFFFF
+    font-weight: bold
+  .select-field
+    height: 40px
+    max-width: 100%
+    padding: 0 10px
+    grid-column: span 1
+    border: 1px solid #E6E8F2
+    border-radius: 3px
+  .checkbox-field
+    outline: 1px solid #E6E8F2
+
+
+
+
+
