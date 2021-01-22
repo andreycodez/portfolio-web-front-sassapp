@@ -21,3 +21,15 @@
 .grid-item-left-bottom
   align-self: end
   justify-self: start
+
+q
+  display: inline-block
+  quotes: "\201c" "\201d"
+  font-style: oblique
+  &:before
+    content: open-quote
+  &:after
+    content: close-quote
+
+.logo
+  width: 100px
