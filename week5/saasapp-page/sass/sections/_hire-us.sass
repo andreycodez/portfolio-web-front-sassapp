@@ -9,10 +9,8 @@
   .description > .subtext
     color: #BDC2CE
     font-size: 14px
-  .employee-info
-    margin-top: 30px
-    .employee-job
-      color: #BDC2CE
+  .employee-info > .employee-job
+    color: #BDC2CE
   .photo-stack
     display: grid
     grid-template-columns: repeat(3, 60px)
@@ -36,17 +34,9 @@
 .bottom-divider
   padding-bottom: 30px
   border-bottom: 1px solid #BDC2CE
-  margin-bottom: 30px
 
 q
-  display: inline-block
-  quotes: "\201c" "\201d"
-  font-style: oblique
   max-width: 300px
-  &:before
-    content: open-quote
-  &:after
-    content: close-quote
 
 .form
   background-color: #FFFFFF
@@ -54,7 +44,6 @@ q
   border-radius: 5px
 
 .form-container > form
-  margin-top: 20px
   display: grid
   grid-template-columns: repeat(2, 1fr)
   gap: 20px
@@ -73,7 +62,6 @@ q
     border-radius: 3px
     font-size: 14px
   .privacy-policy
-    margin-top: 10px
     grid-column: span 2
     display: grid
     grid-template-columns: 20px 1fr
@@ -82,7 +70,6 @@ q
       color: $text-color-regular
       border-bottom: 1px dashed $text-color-regular
   .submit-button
-    margin-top: 20px
     grid-column: span 2
     height: 40px
     background-color: $main-color-blue
