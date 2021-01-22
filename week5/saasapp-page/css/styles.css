@@ -1,11 +1,21 @@
 @charset "UTF-8";
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
+
+ul {
+  list-style-type: none; }
 
 body {
   font-family: "Arial", serif;
   font-size: 16px; }
+
+.mt-5 {
+  margin-top: 5px; }
+
+.mt-10 {
+  margin-top: 10px; }
 
 .mt-20 {
   margin-top: 20px; }
@@ -39,6 +49,45 @@ body {
 
 .mt-200 {
   margin-top: 200px; }
+
+.mb-5 {
+  margin-bottom: 5px; }
+
+.mb-10 {
+  margin-bottom: 10px; }
+
+.mb-20 {
+  margin-bottom: 20px; }
+
+.mb-30 {
+  margin-bottom: 30px; }
+
+.mb-40 {
+  margin-bottom: 40px; }
+
+.mb-50 {
+  margin-bottom: 50px; }
+
+.mb-60 {
+  margin-bottom: 60px; }
+
+.mb-80 {
+  margin-bottom: 80px; }
+
+.mb-100 {
+  margin-bottom: 100px; }
+
+.mb-120 {
+  margin-bottom: 120px; }
+
+.mb-140 {
+  margin-bottom: 140px; }
+
+.mb-150 {
+  margin-bottom: 150px; }
+
+.mb-200 {
+  margin-bottom: 200px; }
 
 .pt-40 {
   padding-top: 40px; }
@@ -165,6 +214,11 @@ a {
 a.underlined:hover {
   border-bottom: 1px solid #2576FF; }
 
+a.menu {
+  font-size: 14px;
+  color: #677788;
+  font-weight: normal; }
+
 .card {
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -210,6 +264,18 @@ a.underlined:hover {
 .grid-item-left-bottom {
   align-self: end;
   justify-self: start; }
+
+q {
+  display: inline-block;
+  quotes: "“" "”";
+  font-style: oblique; }
+  q:before {
+    content: open-quote; }
+  q:after {
+    content: close-quote; }
+
+.logo {
+  width: 100px; }
 
 .top-section {
   width: 100%;
@@ -289,7 +355,6 @@ a.underlined:hover {
     grid-template-columns: min-content; }
     .header-logo-section a img {
       grid-column: 1/span 1;
-      width: 100px;
       align-self: center; }
 
 .header-top-menu {
@@ -599,10 +664,8 @@ a.underlined:hover {
   .hire-us-form .description > .subtext {
     color: #BDC2CE;
     font-size: 14px; }
-  .hire-us-form .employee-info {
-    margin-top: 30px; }
-    .hire-us-form .employee-info .employee-job {
-      color: #BDC2CE; }
+  .hire-us-form .employee-info > .employee-job {
+    color: #BDC2CE; }
   .hire-us-form .photo-stack {
     display: grid;
     grid-template-columns: repeat(3, 60px);
@@ -626,18 +689,10 @@ a.underlined:hover {
 
 .bottom-divider {
   padding-bottom: 30px;
-  border-bottom: 1px solid #BDC2CE;
-  margin-bottom: 30px; }
+  border-bottom: 1px solid #BDC2CE; }
 
 q {
-  display: inline-block;
-  quotes: "“" "”";
-  font-style: oblique;
   max-width: 300px; }
-  q:before {
-    content: open-quote; }
-  q:after {
-    content: close-quote; }
 
 .form {
   background-color: #FFFFFF;
@@ -645,7 +700,6 @@ q {
   border-radius: 5px; }
 
 .form-container > form {
-  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px; }
@@ -664,7 +718,6 @@ q {
     border-radius: 3px;
     font-size: 14px; }
   .form-container > form .privacy-policy {
-    margin-top: 10px;
     grid-column: span 2;
     display: grid;
     grid-template-columns: 20px 1fr; }
@@ -673,7 +726,6 @@ q {
       color: #677788;
       border-bottom: 1px dashed #677788; }
   .form-container > form .submit-button {
-    margin-top: 20px;
     grid-column: span 2;
     height: 40px;
     background-color: #2576FF;
@@ -691,5 +743,25 @@ q {
     border-radius: 3px; }
   .form-container > form .checkbox-field {
     outline: 1px solid #E6E8F2; }
+
+.footer-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  padding-bottom: 40px; }
+
+.bottom-menu-list > li {
+  padding-bottom: 10px; }
+  .bottom-menu-list > li span {
+    font-size: 10px;
+    font-weight: normal;
+    padding: 3px 5px;
+    border-radius: 3px;
+    background-color: #2576FF;
+    margin-left: 5px;
+    color: #FFFFFF; }
+  .bottom-menu-list > li a i {
+    width: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
