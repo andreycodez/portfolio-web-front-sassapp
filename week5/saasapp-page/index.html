@@ -390,11 +390,16 @@
                                 be in touch as soon as pissible
                             </h3>
                             <form action="" class="mt-20">
-                                <input class="input-field" type="text" placeholder="First name">
-                                <input class="input-field" type="text" placeholder="Last name">
-                                <input class="input-field" type="text" placeholder="Work email">
-                                <input class="input-field" type="text" placeholder="Company Website">
-                                <select class="select-field" name="" id="">
+                                <label for="firstName">First Name</label>
+                                <input class="input-field" name="firstName" id="firstName" type="text" placeholder="First name">
+                                <label for="lastName">Last Name</label>
+                                <input class="input-field" name="lastName" id="lastName" type="text" placeholder="Last name">
+                                <label for="workEmail">Work Email</label>
+                                <input class="input-field" name="workEmail" id="workEmail" type="text" placeholder="Work email">
+                                <label for="companyWebsite">Company Website</label>
+                                <input class="input-field" name="companyWebsite" id="companyWebsite" type="text" placeholder="Company Website">
+                                <label for="budget">Bidget</label>
+                                <select class="select-field" name="" id="budget">
                                     <option value="" selected disabled>Budget</option>
                                     <option value="large">50K +</option>
                                     <option value="big">10K - 30K</option>
@@ -402,21 +407,24 @@
                                     <option value="small">1K - 3K</option>
                                     <option value="no-budget">< 1K</option>
                                 </select>
-                                <select class="select-field" name="" id="">
+                                <label for="country">Country</label>
+                                <select class="select-field" name="" id="country">
                                     <option value="" selected disabled>Country</option>
                                     <option value="russia">Russia</option>
                                     <option value="ukraine">Ukraine</option>
                                     <option value="belarus">Belarus</option>
                                 </select>
+                                <label for="tellUsMore">Tell Us More</label>
                                 <textarea
-                                        name=""
-                                        id=""
+                                        name="tellUsMore"
+                                        id="tellUsMore"
                                         cols="30"
                                         rows="10"
                                         placeholder="Tell us more about your project, needs, and timeline."
                                 ></textarea>
                                 <div class="privacy-policy mt-10">
-                                    <input type="checkbox" class="checkbox-field">
+                                    <label for="privacyPolicy">Privacy Policy</label>
+                                    <input type="checkbox" name="privacyPolicy" id="privacyPolicy" class="checkbox-field">
                                     <p class="subtext">
                                         Yes, I'd like to receive occasional marketing emails from
                                         Front. I have the right to opt out at any time. <a href="#">View privacy
@@ -435,11 +443,13 @@
         <!-- FOOTER -->
         <footer class="main-grid mt-60">
             <div class="content-grid footer-container">
-                <div class="copyright">
-                    <img src="images/project_logo/logo.svg" alt="" class="logo">
+                <div class="bottom-menu">
+                    <a href="#">
+                        <img src="images/project_logo/logo.svg" alt="" class="logo mb-30">
+                    </a>
                     <ul class="bottom-menu-list">
-                        <li><i class="fa fa-plane"></i>153 Williamson Plaza, Maggieberg</li>
-                        <li><i class="fa fa-phone"></i>+1 (062) 109-9222</li>
+                        <li><i class="fa fa-plane"></i><a href="#" class="menu">153 Williamson Plaza, Maggieberg</a></li>
+                        <li><i class="fa fa-phone"></i><a href="#" class="menu">+1 (062) 109-9222</a></li>
                     </ul>
                 </div>
                 <div class="bottom-menu">
@@ -481,8 +491,8 @@
                     <h3>Resources</h3>
                     <nav>
                         <ul class="bottom-menu-list">
-                            <li><a href="" class="menu"><i class="fa fa-info"></i>Help</a></li>
-                            <li><a href="" class="menu"><i class="fa fa-user"></i>Your Account</a></li>
+                            <li><i class="fa fa-info"></i><a href="" class="menu">Help</a></li>
+                            <li><i class="fa fa-user"></i><a href="" class="menu">Your Account</a></li>
                         </ul>
                     </nav>
                 </div>
