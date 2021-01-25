@@ -42,7 +42,6 @@
 .learn-more:hover
   border-bottom: 1px solid $main-color-blue
 
-
 .jumbotron-service-logo-icons
   width: 100%
   height: 100%
@@ -57,17 +56,6 @@
   box-shadow: 0 3px 10px 2px rgba(226, 226, 226, 1)
   display: grid
   grid-template-columns: 1fr
-  animation-name: image-background-appear
-  animation-delay: .2s
-  animation-duration: 1s
-  animation-fill-mode: forwards
-  -webkit-animation-name: image-background-appear
-  -webkit-animation-delay: .2s
-  -webkit-animation-duration: 1s
-  -webkit-animation-fill-mode: forwards
-  visibility: hidden
-  opacity: 0
-  transform: translateY(50px)
   img
     grid-column: 1 / span 1
     align-self: center
@@ -76,25 +64,13 @@
     height: 60%
     visibility: hidden
     opacity: 0
-    animation-name: image-appear
-    animation-fill-mode: forwards
-    animation-delay: .2s
-    animation-duration: 1s
-    -webkit-animation-name: image-appear
-    -webkit-animation-fill-mode: forwards
-    -webkit-animation-delay: .2s
-    -webkit-animation-duration: 1s
 
 .service-big
   height: 90px
   width: 90px
-  animation-duration: 1.3s
-  -webkit-animation-duration: 1.3s
   img
     width: 50%
     height: 50%
-    animation-duration: 1.3s
-    -webkit-animation-duration: 1.3s
 
 .google
   top: 50px
@@ -123,49 +99,79 @@
   top: 320px
   right: 0
 
+@media (min-width: 1024px)
+  .jumbotron-service
+    animation-name: image-background-appear
+    animation-delay: .2s
+    animation-duration: 1s
+    animation-fill-mode: forwards
+    -webkit-animation-name: image-background-appear
+    -webkit-animation-delay: .2s
+    -webkit-animation-duration: 1s
+    -webkit-animation-fill-mode: forwards
+    visibility: hidden
+    opacity: 0
+    transform: translateY(50px)
+    img
+      animation-name: image-appear
+      animation-fill-mode: forwards
+      animation-delay: .2s
+      animation-duration: 1s
+      -webkit-animation-name: image-appear
+      -webkit-animation-fill-mode: forwards
+      -webkit-animation-delay: .2s
+      -webkit-animation-duration: 1s
+    .service-big
+      animation-duration: 3s
+      -webkit-animation-duration: 3s
+      animation-delay: .8s
+      img
+        animation-duration: 3s
+        -webkit-animation-duration: 3s
 
-@keyframes image-appear
-  0%
-    visibility: hidden
-    opacity: 0
-  1%
-    visibility: hidden
-    opacity: 0
-  100%
-    visibility: visible
-    opacity: 1
 
-@-webkit-keyframes image-appear
-  0%
-    visibility: hidden
-    opacity: 0
-  1%
-    visibility: hidden
-    opacity: 0
-  100%
-    visibility: visible
-    opacity: 1
+  @keyframes image-appear
+    0%
+      visibility: hidden
+      opacity: 0
+    1%
+      visibility: hidden
+      opacity: 0
+    100%
+      visibility: visible
+      opacity: 1
 
-@keyframes image-background-appear
-  0%
-    visibility: hidden
-    opacity: 0
-  1%
-    visibility: hidden
-    opacity: 0
-  100%
-    visibility: visible
-    opacity: 1
-    transform: translateY(-50px)
+  @-webkit-keyframes image-appear
+    0%
+      visibility: hidden
+      opacity: 0
+    1%
+      visibility: hidden
+      opacity: 0
+    100%
+      visibility: visible
+      opacity: 1
 
-@-webkit-keyframes image-background-appear
-  0%
-    visibility: hidden
-    opacity: 0
-  1%
-    visibility: hidden
-    opacity: 0
-  100%
-    visibility: visible
-    opacity: 1
-    transform: translateY(-50px)
+  @keyframes image-background-appear
+    0%
+      visibility: hidden
+      opacity: 0
+    1%
+      visibility: hidden
+      opacity: 0
+    100%
+      visibility: visible
+      opacity: 1
+      transform: translateY(-50px)
+
+  @-webkit-keyframes image-background-appear
+    0%
+      visibility: hidden
+      opacity: 0
+    1%
+      visibility: hidden
+      opacity: 0
+    100%
+      visibility: visible
+      opacity: 1
+      transform: translateY(-50px)
