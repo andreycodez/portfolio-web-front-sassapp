@@ -5,6 +5,7 @@
   grid-auto-flow: column
   grid-template-columns: 30px auto auto
   gap: 20px
+  overflow: hidden
 
 .banner-one-text
   grid-column: 2 / span 1
@@ -17,3 +18,15 @@
   justify-self: end
   img
     height: 360px
+
+@media (min-width: 1024px)
+  .banner-one-image
+    img
+      position: relative
+      top: 578px
+      -webkit-transform: translateY(-574px)
+      transform: translateY(-574px)
+      -webkit-transition: transform 1s ease-out
+      transition: transform 1s ease-out
+      -webkit-transition-delay: 1s
+      transition-delay: 1s
