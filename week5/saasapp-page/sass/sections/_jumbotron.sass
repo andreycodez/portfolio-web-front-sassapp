@@ -61,6 +61,10 @@
   animation-delay: .2s
   animation-duration: 1s
   animation-fill-mode: forwards
+  -webkit-animation-name: image-background-appear
+  -webkit-animation-delay: .2s
+  -webkit-animation-duration: 1s
+  -webkit-animation-fill-mode: forwards
   visibility: hidden
   opacity: 0
   transform: translateY(50px)
@@ -76,15 +80,21 @@
     animation-fill-mode: forwards
     animation-delay: .2s
     animation-duration: 1s
+    -webkit-animation-name: image-appear
+    -webkit-animation-fill-mode: forwards
+    -webkit-animation-delay: .2s
+    -webkit-animation-duration: 1s
 
 .service-big
   height: 90px
   width: 90px
   animation-duration: 1.3s
+  -webkit-animation-duration: 1.3s
   img
     width: 50%
     height: 50%
     animation-duration: 1.3s
+    -webkit-animation-duration: 1.3s
 
 .google
   top: 50px
@@ -122,7 +132,24 @@
     visibility: visible
     opacity: 1
 
+@-webkit-keyframes image-appear
+  0%
+    visibility: hidden
+    opacity: 0
+  100%
+    visibility: visible
+    opacity: 1
+
 @keyframes image-background-appear
+  0%
+    visibility: hidden
+    opacity: 0
+  100%
+    visibility: visible
+    opacity: 1
+    transform: translateY(-50px)
+
+@-webkit-keyframes image-background-appear
   0%
     visibility: hidden
     opacity: 0
