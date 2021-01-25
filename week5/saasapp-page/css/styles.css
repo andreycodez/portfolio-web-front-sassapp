@@ -393,7 +393,7 @@ q {
   grid-auto-flow: column;
   height: 480px;
   position: relative;
-  top: 120px; }
+  top: 140px; }
 
 .jumbotron-headline > h1 {
   width: 300px; }
@@ -441,23 +441,38 @@ q {
   border-radius: 50%;
   box-shadow: 0 3px 10px 2px #e2e2e2;
   display: grid;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;
+  animation-name: image-background-appear;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(50px); }
   .jumbotron-service img {
     grid-column: 1/span 1;
     align-self: center;
     justify-self: center;
     width: 60%;
-    height: 60%; }
+    height: 60%;
+    visibility: hidden;
+    opacity: 0;
+    animation-name: image-appear;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+    animation-duration: 1s; }
 
 .service-big {
   height: 90px;
-  width: 90px; }
+  width: 90px;
+  animation-duration: 1.3s; }
   .service-big img {
     width: 50%;
-    height: 50%; }
+    height: 50%;
+    animation-duration: 1.3s; }
 
 .google {
-  top: 0;
+  top: 50px;
   left: 0; }
 
 .google-ads {
@@ -483,6 +498,21 @@ q {
   top: 320px;
   right: 0; }
 
+@keyframes image-appear {
+  0% {
+    visibility: hidden;
+    opacity: 0; }
+  100% {
+    visibility: visible;
+    opacity: 1; } }
+@keyframes image-background-appear {
+  0% {
+    visibility: hidden;
+    opacity: 0; }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-50px); } }
 .key-benefits-container {
   margin-top: 150px; }
 
