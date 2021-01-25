@@ -512,11 +512,17 @@ q {
   0% {
     visibility: hidden;
     opacity: 0; }
+  1% {
+    visibility: hidden;
+    opacity: 0; }
   100% {
     visibility: visible;
     opacity: 1; } }
 @-webkit-keyframes image-appear {
   0% {
+    visibility: hidden;
+    opacity: 0; }
+  1% {
     visibility: hidden;
     opacity: 0; }
   100% {
@@ -526,12 +532,18 @@ q {
   0% {
     visibility: hidden;
     opacity: 0; }
+  1% {
+    visibility: hidden;
+    opacity: 0; }
   100% {
     visibility: visible;
     opacity: 1;
     transform: translateY(-50px); } }
 @-webkit-keyframes image-background-appear {
   0% {
+    visibility: hidden;
+    opacity: 0; }
+  1% {
     visibility: hidden;
     opacity: 0; }
   100% {
