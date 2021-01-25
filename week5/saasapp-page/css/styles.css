@@ -441,18 +441,7 @@ q {
   border-radius: 50%;
   box-shadow: 0 3px 10px 2px #e2e2e2;
   display: grid;
-  grid-template-columns: 1fr;
-  animation-name: image-background-appear;
-  animation-delay: 0.2s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  -webkit-animation-name: image-background-appear;
-  -webkit-animation-delay: 0.2s;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(50px); }
+  grid-template-columns: 1fr; }
   .jumbotron-service img {
     grid-column: 1/span 1;
     align-self: center;
@@ -460,26 +449,14 @@ q {
     width: 60%;
     height: 60%;
     visibility: hidden;
-    opacity: 0;
-    animation-name: image-appear;
-    animation-fill-mode: forwards;
-    animation-delay: 0.2s;
-    animation-duration: 1s;
-    -webkit-animation-name: image-appear;
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-delay: 0.2s;
-    -webkit-animation-duration: 1s; }
+    opacity: 0; }
 
 .service-big {
   height: 90px;
-  width: 90px;
-  animation-duration: 1.3s;
-  -webkit-animation-duration: 1.3s; }
+  width: 90px; }
   .service-big img {
     width: 50%;
-    height: 50%;
-    animation-duration: 1.3s;
-    -webkit-animation-duration: 1.3s; }
+    height: 50%; }
 
 .google {
   top: 50px;
@@ -508,48 +485,78 @@ q {
   top: 320px;
   right: 0; }
 
-@keyframes image-appear {
-  0% {
+@media (min-width: 1024px) {
+  .jumbotron-service {
+    animation-name: image-background-appear;
+    animation-delay: 0.2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: image-background-appear;
+    -webkit-animation-delay: 0.2s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
     visibility: hidden;
-    opacity: 0; }
-  1% {
-    visibility: hidden;
-    opacity: 0; }
-  100% {
-    visibility: visible;
-    opacity: 1; } }
-@-webkit-keyframes image-appear {
-  0% {
-    visibility: hidden;
-    opacity: 0; }
-  1% {
-    visibility: hidden;
-    opacity: 0; }
-  100% {
-    visibility: visible;
-    opacity: 1; } }
-@keyframes image-background-appear {
-  0% {
-    visibility: hidden;
-    opacity: 0; }
-  1% {
-    visibility: hidden;
-    opacity: 0; }
-  100% {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(-50px); } }
-@-webkit-keyframes image-background-appear {
-  0% {
-    visibility: hidden;
-    opacity: 0; }
-  1% {
-    visibility: hidden;
-    opacity: 0; }
-  100% {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(-50px); } }
+    opacity: 0;
+    transform: translateY(50px); }
+    .jumbotron-service img {
+      animation-name: image-appear;
+      animation-fill-mode: forwards;
+      animation-delay: 0.2s;
+      animation-duration: 1s;
+      -webkit-animation-name: image-appear;
+      -webkit-animation-fill-mode: forwards;
+      -webkit-animation-delay: 0.2s;
+      -webkit-animation-duration: 1s; }
+    .jumbotron-service .service-big {
+      animation-duration: 3s;
+      -webkit-animation-duration: 3s;
+      animation-delay: 0.8s; }
+      .jumbotron-service .service-big img {
+        animation-duration: 3s;
+        -webkit-animation-duration: 3s; }
+
+  @keyframes image-appear {
+    0% {
+      visibility: hidden;
+      opacity: 0; }
+    1% {
+      visibility: hidden;
+      opacity: 0; }
+    100% {
+      visibility: visible;
+      opacity: 1; } }
+  @-webkit-keyframes image-appear {
+    0% {
+      visibility: hidden;
+      opacity: 0; }
+    1% {
+      visibility: hidden;
+      opacity: 0; }
+    100% {
+      visibility: visible;
+      opacity: 1; } }
+  @keyframes image-background-appear {
+    0% {
+      visibility: hidden;
+      opacity: 0; }
+    1% {
+      visibility: hidden;
+      opacity: 0; }
+    100% {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(-50px); } }
+  @-webkit-keyframes image-background-appear {
+    0% {
+      visibility: hidden;
+      opacity: 0; }
+    1% {
+      visibility: hidden;
+      opacity: 0; }
+    100% {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(-50px); } } }
 .key-benefits-container {
   margin-top: 150px; }
 
@@ -567,13 +574,21 @@ q {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px; }
 
+@media (min-width: 1024px) {
+  .key-benefit-card {
+    transform: translateY(10px);
+    transition: transform 0.4s ease-in-out; }
+    .key-benefit-card:hover, .key-benefit-card:focus {
+      transform: translateY(-10px);
+      transition: transform 0.4s ease-in-out; } }
 .banner-one-container {
   background-color: #F8FAFE;
   height: 480px;
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 30px auto auto;
-  gap: 20px; }
+  gap: 20px;
+  overflow: hidden; }
 
 .banner-one-text {
   grid-column: 2/span 1;
@@ -587,6 +602,16 @@ q {
   .banner-one-image img {
     height: 360px; }
 
+@media (min-width: 1024px) {
+  .banner-one-image img {
+    position: relative;
+    top: 578px;
+    -webkit-transform: translateY(-574px);
+    transform: translateY(-574px);
+    -webkit-transition: transform 1s ease-out;
+    transition: transform 1s ease-out;
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s; } }
 .play-icon {
   padding-top: 1px;
   padding-left: 2px; }
