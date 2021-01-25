@@ -7,7 +7,7 @@
   grid-auto-flow: column
   height: 480px
   position: relative
-  top: 120px
+  top: 140px
 
 .jumbotron-headline > h1
   width: 300px
@@ -57,23 +57,37 @@
   box-shadow: 0 3px 10px 2px rgba(226, 226, 226, 1)
   display: grid
   grid-template-columns: 1fr
+  animation-name: image-background-appear
+  animation-delay: .2s
+  animation-duration: 1s
+  animation-fill-mode: forwards
+  visibility: hidden
+  opacity: 0
+  transform: translateY(50px)
   img
     grid-column: 1 / span 1
     align-self: center
     justify-self: center
     width: 60%
     height: 60%
+    visibility: hidden
+    opacity: 0
+    animation-name: image-appear
+    animation-fill-mode: forwards
+    animation-delay: .2s
+    animation-duration: 1s
 
 .service-big
   height: 90px
   width: 90px
+  animation-duration: 1.3s
   img
     width: 50%
     height: 50%
-
+    animation-duration: 1.3s
 
 .google
-  top: 0
+  top: 50px
   left: 0
 
 .google-ads
@@ -98,3 +112,21 @@
 .calendar
   top: 320px
   right: 0
+
+
+@keyframes image-appear
+  0%
+    visibility: hidden
+    opacity: 0
+  100%
+    visibility: visible
+    opacity: 1
+
+@keyframes image-background-appear
+  0%
+    visibility: hidden
+    opacity: 0
+  100%
+    visibility: visible
+    opacity: 1
+    transform: translateY(-50px)
