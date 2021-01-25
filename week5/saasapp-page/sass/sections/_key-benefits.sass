@@ -15,3 +15,10 @@
   grid-template-columns: repeat(4, 1fr)
   grid-gap: 20px
 
+@media (min-width: 1024px)
+  .key-benefit-card
+    transform: translateY(10px)
+    transition: transform .4s ease-in-out
+    &:hover, &:focus
+      transform: translateY(-10px)
+      transition: transform .4s ease-in-out
