@@ -3,7 +3,7 @@
   grid-auto-flow: column
   grid-template-columns: repeat(5, 1fr)
   gap: 30px
-  padding-bottom: 60px
+  padding-bottom: 30px
 
 .bottom-menu > h3
   padding-bottom: 5px
@@ -25,7 +25,84 @@
     color: $text-color-regular
     display: inline-block
     font-size: 12px
-  a
-    &:hover
-      border-bottom: 1px solid $text-color-regular
-      padding-bottom: 2px
+
+.post-footer
+  border-top: 1px solid #E6E9F2
+  padding-top: 30px
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 30px
+  margin-bottom: 20px
+  align-items: center
+
+.footer-breadcrumb
+  grid-column: 1 / span 1
+
+.footer-breadcrumb-list
+  display: flex
+  flex-direction: row
+
+.footer-breadcrumb-item
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: min-content 15px
+  gap: 10px
+  &::after
+    font-family: "Font Awesome 5 Pro"
+    font-weight: 100
+    content: "\f105"
+    color: #677788
+  &:last-child::after
+    content: unset
+
+.footer-socials
+  grid-column: 2 / span 1
+  display: flex
+  justify-content: flex-end
+
+.footer-social-item
+  width: 30px
+  background-color: #ECF2FF
+  display: flex
+  align-items: center
+  justify-content: center
+  &:hover
+    background-color: #677788
+    color: #ECF2FF
+
+.footer-social-item, .footer-socials > select
+  margin-left: 10px
+  background-color: #ECF2FF
+  height: 30px
+  border: none
+  border-radius: 5px
+  color: #677788
+  font-size: 12px
+
+.footer-socials > select
+  padding: 0 30px 0 10px
+  -webkit-appearance: none
+  appearance: none
+  background-image: url("../images/icons/angle-down.svg")
+  background-repeat: no-repeat
+  background-position: right
+  background-size: 7%
+  background-position-x: 120px
+
+
+.dropdown
+  min-width: 100px
+
+.footer-post-text
+  grid-column: 1 / -1
+  p
+    padding-bottom: 20px
+    text-align: center
+    color: #677788
+    font-size: 14px
+    line-height: 20px
+    width: 70%
+    margin: auto
+
+
+
