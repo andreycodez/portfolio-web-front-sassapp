@@ -218,7 +218,7 @@ a.menu {
   a.menu:hover {
     color: #2576FF; }
 
-.font-links-12 {
+a.font-links-12 {
   font-size: 12px; }
 
 .card {
@@ -494,13 +494,14 @@ q {
       -webkit-animation-fill-mode: forwards;
       -webkit-animation-delay: 0.2s;
       -webkit-animation-duration: 1s; }
-    .jumbotron-service .service-big {
-      animation-duration: 3s;
-      -webkit-animation-duration: 3s;
-      animation-delay: 0.8s; }
-      .jumbotron-service .service-big img {
-        animation-duration: 3s;
-        -webkit-animation-duration: 3s; }
+
+  .jumbotron-service-logo-icons > .service-big {
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-delay: 0.4s; }
+    .jumbotron-service-logo-icons > .service-big img {
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s; }
 
   @keyframes image-appear {
     0% {
@@ -587,20 +588,31 @@ q {
   align-self: end;
   justify-self: end; }
   .banner-one-image img {
-    height: 360px; }
-
-@media (min-width: 1024px) {
-  .banner-one-image img {
+    height: 360px;
     position: relative;
     top: 578px;
-    transform: translateY(-574px);
-    transition: transform 3s ease-out;
-    transition-delay: 2s;
-    transition-duration: 2s;
-    -webkit-transition-duration: 2s;
-    -webkit-transform: translateY(-574px);
-    -webkit-transition: transform 3s ease-out;
-    -webkit-transition-delay: 2s; } }
+    visibility: hidden;
+    opacity: 0; }
+  .banner-one-image img.appear-on-scroll {
+    animation-name: banner-one-image-appear;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    -webkit-animation-name: banner-one-image-appear;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s; }
+
+@media (min-width: 1024px) {
+  @keyframes banner-one-image-appear {
+    0% {
+      visibility: hidden;
+      opacity: 0; }
+    1% {
+      visibility: hidden;
+      opacity: 0; }
+    100% {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(-574px); } } }
 .play-icon {
   padding-top: 1px;
   padding-left: 2px; }
@@ -820,10 +832,15 @@ q {
   .form-container > form .select-field {
     height: 40px;
     max-width: 100%;
-    padding: 0 10px;
     grid-column: span 1;
     border: 1px solid #E6E8F2;
-    border-radius: 3px; }
+    border-radius: 3px;
+    padding: 0 30px 0 10px;
+    -webkit-appearance: none;
+    background-image: url("../images/icons/angle-down@2x.png");
+    background-repeat: no-repeat;
+    background-size: 4%;
+    background-position: 92% 50%; }
   .form-container > form .checkbox-field {
     outline: 1px solid #E6E8F2; }
 
@@ -909,14 +926,13 @@ q {
   font-size: 12px; }
 
 .footer-socials > select {
-  padding: 0 30px 0 10px;
+  padding: 0 30px 0 15px;
   -webkit-appearance: none;
-  appearance: none;
-  background-image: url("../images/icons/angle-down.svg");
+  background-image: url("../images/icons/angle-down@2x.png");
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: 7%;
-  background-position-x: 120px; }
+  background-size: 6%;
+  background-position: 92% 50%;
+  outline: none; }
 
 .dropdown {
   min-width: 100px; }
