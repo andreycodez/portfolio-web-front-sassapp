@@ -18,17 +18,30 @@
   justify-self: end
   img
     height: 360px
+    position: relative
+    top: 578px
+    visibility: hidden
+    opacity: 0
+  img.appear-on-scroll
+    animation-name: banner-one-image-appear
+    animation-fill-mode: forwards
+    animation-duration: 1s
+    -webkit-animation-name: banner-one-image-appear
+    -webkit-animation-fill-mode: forwards
+    -webkit-animation-duration: 1s
+
 
 @media (min-width: 1024px)
-  .banner-one-image
-    img
-      position: relative
-      top: 578px
+
+
+  @keyframes banner-one-image-appear
+    0%
+      visibility: hidden
+      opacity: 0
+    1%
+      visibility: hidden
+      opacity: 0
+    100%
+      visibility: visible
+      opacity: 1
       transform: translateY(-574px)
-      transition: transform 3s ease-out
-      transition-delay: 2s
-      transition-duration: 2s
-      -webkit-transition-duration: 2s
-      -webkit-transform: translateY(-574px)
-      -webkit-transition: transform 3s ease-out
-      -webkit-transition-delay: 2s
