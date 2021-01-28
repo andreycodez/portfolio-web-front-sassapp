@@ -204,6 +204,17 @@ h3 {
       .button .button-content-holder span.icon-background i {
         font-size: 8px; }
 
+@media (min-width: 1024px) {
+  .animated-button {
+    transform: translateY(5px);
+    transition: transform 0.4s ease-in-out;
+    -webkit-transform: translateY(5px);
+    -webkit-transition: transform 0.4s ease-in-out; }
+    .animated-button:hover, .animated-button:focus {
+      transform: translateY(-5px);
+      transition: transform 0.4s ease-in-out;
+      -webkit-transform: translateY(-5px);
+      -webkit-transition: transform 0.4s ease-in-out; } }
 a {
   white-space: nowrap;
   font-size: 14px;
@@ -738,6 +749,8 @@ q {
     border-bottom: 1px solid #677788; }
     .main-plan-content .price .price-sum {
       font-size: 50px; }
+    .main-plan-content .price .price-sub {
+      color: #677788; }
   .main-plan-content .subtext {
     margin-top: 30px;
     line-height: 24px;
@@ -747,6 +760,29 @@ q {
   .main-plan-content a {
     margin-top: 40px; }
 
+@media (min-width: 1024px) {
+  .pricing-info {
+    top: 400px;
+    visibility: hidden;
+    opacity: 0; }
+
+  .animated-pricing {
+    position: relative;
+    animation-name: animating-pricing;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards; }
+
+  @keyframes animating-pricing {
+    0% {
+      visibility: hidden;
+      opacity: 0; }
+    1% {
+      visibility: hidden;
+      opacity: 0; }
+    100% {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(-400px); } } }
 .section-with-background {
   background-color: #20335B; }
 
