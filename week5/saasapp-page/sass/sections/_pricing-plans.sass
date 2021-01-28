@@ -25,6 +25,7 @@
     .price-sum
       font-size: 50px
     .price-sub
+      color: $text-color-regular
   .subtext
     margin-top: 30px
     line-height: 24px
@@ -34,4 +35,25 @@
   a
     margin-top: 40px
 
+@media (min-width: 1024px)
+  .pricing-info
+    top: 400px
+    visibility: hidden
+    opacity: 0
+  .animated-pricing
+    position: relative
+    animation-name: animating-pricing
+    animation-duration: .4s
+    animation-fill-mode: forwards
 
+  @keyframes animating-pricing
+    0%
+      visibility: hidden
+      opacity: 0
+    1%
+      visibility: hidden
+      opacity: 0
+    100%
+      visibility: visible
+      opacity: 1
+      transform: translateY(-400px)
