@@ -178,7 +178,7 @@
                 <div class="banner-one-text">
                     <div class="main-text">
                         Front makes you look at things from a different prospectives
-                        <a href="#" class="no-text-decoration">
+                        <a href="#" class="no-text-decoration animated-button">
                             <div class="button">
                                 <div class="button-content-holder">
                                     <span>Get started</span>
@@ -546,6 +546,9 @@
                 let scroll = $(window).scrollTop();
                 if (scroll >= 700) {
                     $("#img-movable").addClass("appear-on-scroll");
+                }
+                if (scroll >= 2600) {
+                    $(".pricing-info").addClass("animated-pricing");
                 }
             });
         </script>
