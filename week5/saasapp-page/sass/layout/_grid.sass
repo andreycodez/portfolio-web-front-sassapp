@@ -1,3 +1,4 @@
+// MAIN GRID
 .main-grid
   display: grid
   grid-template-columns: minmax(30px, 1fr) minmax(964px, 1fr) minmax(30px, 1fr)
@@ -12,7 +13,7 @@
 .content-grid-wide
   grid-column: 1 / span 3
 
-
+// PREHEADER
 .preheader
   grid-column: 2 / span 1
   display: grid
@@ -24,6 +25,63 @@
     grid-column: 2 / span 1
     justify-self: end
     align-self: center
+
+// HEADER
+.header
+  grid-column: 2 / span 1
+  grid-row: 2 / span 1
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: 300px 1fr min-content
+  align-items: center
+  gap: 30px
+
+.header-logo-section
+  grid-column: 1 / span 1
+  a
+    display: grid
+    grid-template-columns: min-content
+    img
+      grid-column: 1 / span 1
+      align-self: center
+
+.header-top-menu
+  grid-column: 2 / span 1
+  justify-self: end
+  align-self: center
+
+.header-top-menu-list
+  display: grid
+  grid-auto-flow: column
+  grid-auto-columns: min-content
+
+.header-top-menu-buy-button
+  align-self: center
+  justify-self: end
+
+// JUMBOTRON
+
+.jumbotron
+  grid-column: 2 / span 1
+  grid-row: 3 / span 1
+  display: grid
+  gap: 130px
+  grid-template-columns: 1fr 1fr
+  grid-auto-flow: column
+
+.jumbotron-headline > .actions
+  display: grid
+  grid-template-columns: min-content min-content
+  align-items: center
+  gap: 30px
+
+.jumbotron-service
+  display: grid
+  grid-template-columns: 1fr
+  img
+    grid-column: 1 / span 1
+    align-self: center
+    justify-self: center
 
 @media (min-width: 1200px)
   .main-grid
