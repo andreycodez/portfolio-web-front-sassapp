@@ -38,3 +38,16 @@
       justify-content: center
       i
         font-size: 8px
+
+@media (min-width: 1024px)
+  .animated-button
+    transform: translateY(5px)
+    transition: transform .4s ease-in-out
+    -webkit-transform: translateY(5px)
+    -webkit-transition: transform .4s ease-in-out
+    &:hover, &:focus
+      transform: translateY(-5px)
+      transition: transform .4s ease-in-out
+      -webkit-transform: translateY(-5px)
+      -webkit-transition: transform .4s ease-in-out
+
