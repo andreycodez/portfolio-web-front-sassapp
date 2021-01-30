@@ -95,6 +95,24 @@
   grid-template-columns: repeat(4, 1fr)
   grid-gap: 20px
 
+
+// BANNER ONE
+.banner-one-container
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: 30px auto auto
+  gap: 20px
+
+.banner-one-text
+  grid-column: 2 / span 1
+  align-self: center
+  justify-self: start
+
+.banner-one-image
+  grid-column: 3 / span 1
+  align-self: end
+  justify-self: end
+
 @media (min-width: 1200px)
   .main-grid
     grid-template-columns: minmax(60px, 1fr) minmax(1080px, 1fr) minmax(60px, 1fr)
