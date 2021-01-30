@@ -232,6 +232,11 @@ body {
 .hubspot-text {
   align-self: center; }
 
+.trusted-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto; }
+
 @media (min-width: 1200px) {
   .main-grid {
     grid-template-columns: minmax(60px, 1fr) minmax(1080px, 1fr) minmax(60px, 1fr); }
@@ -728,13 +733,9 @@ q {
   .hubspot-text img.hubspot-logo {
     width: 100px; }
 
-.trusted-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: auto; }
-  .trusted-container .trusted-item {
-    width: 100px;
-    margin: auto; }
+.trusted-item {
+  width: 100px;
+  margin: auto; }
 
 .pricing-plans-container {
   display: grid;
