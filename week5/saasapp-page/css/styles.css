@@ -224,6 +224,14 @@ body {
   .why-front-image img {
     grid-column: 2/span 1; }
 
+.hubspot-container {
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: 80px; }
+
+.hubspot-text {
+  align-self: center; }
+
 @media (min-width: 1200px) {
   .main-grid {
     grid-template-columns: minmax(60px, 1fr) minmax(1080px, 1fr) minmax(60px, 1fr); }
@@ -696,11 +704,6 @@ q {
 .why-front-image img {
   width: 100%; }
 
-.hubspot-container {
-  display: grid;
-  grid-template-columns: min-content auto;
-  gap: 80px; }
-
 .hubspot-image {
   position: relative;
   width: 480px;
@@ -716,9 +719,6 @@ q {
   left: -50px;
   bottom: -50px;
   z-index: -1; }
-
-.hubspot-text {
-  align-self: center; }
 
 .hubspot-text {
   font-size: 22px; }
