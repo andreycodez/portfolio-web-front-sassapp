@@ -83,6 +83,18 @@
     align-self: center
     justify-self: center
 
+// KEY BENEFITS
+
+.key-benefits
+  grid-column: 2 / span 1
+
+.key-benefits-cards-container
+  grid-column: 2 / span 1
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: repeat(4, 1fr)
+  grid-gap: 20px
+
 @media (min-width: 1200px)
   .main-grid
     grid-template-columns: minmax(60px, 1fr) minmax(1080px, 1fr) minmax(60px, 1fr)
