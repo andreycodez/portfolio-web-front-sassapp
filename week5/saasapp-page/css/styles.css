@@ -184,6 +184,22 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px; }
 
+.banner-one-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 30px auto auto;
+  gap: 20px; }
+
+.banner-one-text {
+  grid-column: 2/span 1;
+  align-self: center;
+  justify-self: start; }
+
+.banner-one-image {
+  grid-column: 3/span 1;
+  align-self: end;
+  justify-self: end; }
+
 @media (min-width: 1200px) {
   .main-grid {
     grid-template-columns: minmax(60px, 1fr) minmax(1080px, 1fr) minmax(60px, 1fr); }
@@ -592,34 +608,21 @@ q {
 .banner-one-container {
   background-color: #F8FAFE;
   height: 480px;
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 30px auto auto;
-  gap: 20px;
   overflow: hidden; }
 
-.banner-one-text {
-  grid-column: 2/span 1;
-  align-self: center;
-  justify-self: start; }
-
-.banner-one-image {
-  grid-column: 3/span 1;
-  align-self: end;
-  justify-self: end; }
-  .banner-one-image img {
-    height: 360px;
-    position: relative;
-    top: 578px;
-    visibility: hidden;
-    opacity: 0; }
-  .banner-one-image img.appear-on-scroll {
-    animation-name: banner-one-image-appear;
-    animation-fill-mode: forwards;
-    animation-duration: 1s;
-    -webkit-animation-name: banner-one-image-appear;
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-duration: 1s; }
+.banner-one-image img {
+  height: 360px;
+  position: relative;
+  top: 578px;
+  visibility: hidden;
+  opacity: 0; }
+.banner-one-image img.appear-on-scroll {
+  animation-name: banner-one-image-appear;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  -webkit-animation-name: banner-one-image-appear;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s; }
 
 @media (min-width: 1024px) {
   @keyframes banner-one-image-appear {
