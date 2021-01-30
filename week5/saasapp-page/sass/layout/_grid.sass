@@ -113,6 +113,35 @@
   align-self: end
   justify-self: end
 
+
+// WHY FRONT
+
+.why-front-bullets-list
+  display: grid
+  grid-template-columns: auto
+  grid-auto-flow: column
+
+.why-front-bullet-item
+  .bullet
+    display: grid
+    grid-template-columns: 1fr min-content 1fr
+    gap: 6px
+    &::before
+      align-self: center
+      grid-column: 1 / span 1
+    &::after
+      align-self: center
+      grid-column: 3 / span 1
+    .bullet-inner
+      grid-column: 2 / span 1
+
+.why-front-image
+  display: grid
+  grid-template-columns: 30px auto 30px
+  img
+    grid-column: 2 / span 1
+
+
 @media (min-width: 1200px)
   .main-grid
     grid-template-columns: minmax(60px, 1fr) minmax(1080px, 1fr) minmax(60px, 1fr)
