@@ -194,6 +194,36 @@
     grid-column: span 1
 
 
+// FOOTER
+
+.footer-container
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: repeat(5, 1fr)
+  gap: 30px
+
+.post-footer
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 30px
+  align-items: center
+
+.footer-breadcrumb
+  grid-column: 1 / span 1
+
+.footer-breadcrumb-item
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: min-content 15px
+  gap: 10px
+
+.footer-socials
+  grid-column: 2 / span 1
+
+.footer-post-text
+  grid-column: 1 / -1
+
+
 
 @media (min-width: 1200px)
   .main-grid
