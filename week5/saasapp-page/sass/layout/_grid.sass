@@ -26,6 +26,16 @@
     justify-self: end
     align-self: center
 
+.preheader-right-side-menu
+  display: grid
+  grid-auto-flow: column
+
+.preheader-right-side-menu > li, .preheader-left-side-menu > li
+  display: grid
+  grid-template-columns: min-content
+  grid-auto-flow: column
+  gap: 10px
+
 // HEADER
 .header
   grid-column: 2 / span 1
