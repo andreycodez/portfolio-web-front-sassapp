@@ -161,6 +161,40 @@
   grid-auto-columns: auto
 
 
+// HIRE US
+
+.hire-us-form
+  display: grid
+  grid-auto-flow: column
+  gap: 160px
+  display: grid
+  .photo-stack
+    grid-template-columns: repeat(3, 60px)
+    grid-template-rows: 60px
+    gap: 20px
+    img
+      justify-self: flex-start
+      align-self: center
+
+.form-container > form
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 20px
+  input.input-field
+    grid-column: span 1
+  textarea
+    grid-column: span 2
+  .privacy-policy
+    grid-column: span 2
+    display: grid
+    grid-template-columns: 20px 1fr
+  .submit-button
+    grid-column: span 2
+  .select-field
+    grid-column: span 1
+
+
+
 @media (min-width: 1200px)
   .main-grid
     grid-template-columns: minmax(60px, 1fr) minmax(1080px, 1fr) minmax(60px, 1fr)
