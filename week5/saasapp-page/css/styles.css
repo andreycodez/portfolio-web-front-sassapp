@@ -783,7 +783,7 @@ q {
   .animated-pricing {
     position: relative;
     animation-name: animating-pricing;
-    animation-duration: 0.4s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards; }
 
   @keyframes animating-pricing {
