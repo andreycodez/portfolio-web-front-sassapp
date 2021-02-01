@@ -1,0 +1,50 @@
+.main-grid
+  display: grid
+  grid-template-columns: minmax(30px, 1fr) 964px minmax(30px, 1fr)
+
+.content-grid
+  grid-column: 2 / span 1
+
+.header
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+
+.header-date
+  grid-column: 3 / span 1
+  justify-self: end
+
+
+// HEADER TITLE
+.header-title
+  grid-column: 1 / span 3
+
+
+
+// TABLED CONTENT
+.table-content
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 50px
+
+.table-element
+  grid-column: span 1
+
+.table-element-wide
+  grid-column: 1 / -1
+  display: grid
+  grid-template-columns: 150px 300px auto
+  gap: 2px
+
+.signee-conatiner
+  display: grid
+  grid-template-columns: 300px 1fr 300px
+  align-content: end
+
+.signee
+  grid-column: span 1
+
+.signee-left
+  grid-column: 1
+
+.signee-right
+  grid-column: 3
