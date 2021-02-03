@@ -55,11 +55,11 @@
                     <div class="header-top-menu">
                         <nav>
                             <ul class="header-top-menu-list">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Features</a></li>
-                                <li><a href="#">Learn</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">Hire us</a></li>
+                                <li><a href="#" id="top-link-home" class="active">Home</a></li>
+                                <li><a href="#" id="top-link-features">Features</a></li>
+                                <li><a href="#" id="top-link-learn">Learn</a></li>
+                                <li><a href="#" id="top-link-pricing">Pricing</a></li>
+                                <li><a href="#" id="top-link-hire-us">Hire us</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -567,6 +567,39 @@
                     $("#header-extender-on-roll-out").removeClass("header-extender");
                     $("#sticky-header").removeClass("header-close");
                 }
+
+                if (scroll >= 600) {
+                    $("#top-link-home").removeClass("active");
+                } else {
+                    $("#top-link-home").addClass("active");
+                }
+
+                if ((scroll > 599) && (scroll <= 1700)) {
+                    $("#top-link-features").addClass("active");
+                } else {
+                    $("#top-link-features").removeClass("active");
+                }
+
+                if ((scroll > 1699) && (scroll <= 3370)) {
+                    $("#top-link-learn").addClass("active");
+                } else {
+                    $("#top-link-learn").removeClass("active");
+                }
+
+                if ((scroll > 3369) && (scroll <= 4040)) {
+                    $("#top-link-pricing").addClass("active");
+                } else {
+                    $("#top-link-pricing").removeClass("active");
+                }
+
+                if (scroll > 4039) {
+                    $("#top-link-hire-us").addClass("active");
+                } else {
+                    $("#top-link-hire-us").removeClass("active");
+                }
+
+
+
             });
         </script>
     </body>
