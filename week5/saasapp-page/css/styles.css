@@ -92,10 +92,24 @@ body {
 .pt-40 {
   padding-top: 40px; }
 
-.main-grid {
+.main-grid, .main-grid-sticky-header {
   display: grid;
   grid-template-columns: minmax(30px, 1fr) minmax(964px, 1fr) minmax(30px, 1fr);
   grid-auto-flow: row; }
+
+.main-grid-sticky-header {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #333333;
+  align-items: center;
+  height: 80px;
+  position: fixed;
+  top: -16px;
+  left: 0;
+  right: 0;
+  z-index: 10; }
+
+.header-extender {
+  min-height: 44px; }
 
 .main-grid-wide {
   display: grid;
