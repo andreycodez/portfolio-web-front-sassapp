@@ -251,9 +251,9 @@ body {
 .hire-us-form {
   display: grid;
   grid-auto-flow: column;
-  gap: 160px;
-  display: grid; }
+  gap: 160px; }
   .hire-us-form .photo-stack {
+    display: grid;
     grid-template-columns: repeat(3, 60px);
     grid-template-rows: 60px;
     gap: 20px; }
