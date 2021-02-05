@@ -29,8 +29,8 @@
     text-decoration: none
     border-bottom: none
 
-.learn-more:hover
-  border-bottom: 1px solid $main-color-blue
+//.learn-more:hover
+//  border-bottom: 1px solid $main-color-blue
 
 .jumbotron-service-logo-icons
   width: 100%
@@ -58,15 +58,15 @@
     height: 50%
 
 .google
-  top: 50px
-  left: 0
+  top: 20px
+  left: 20px
 
 .google-ads
-  top: 300px
+  top: 150px
   left: 95px
 
 .atlassian
-  top: 50px
+  top: 20px
   left: 140px
 
 .asana
@@ -160,3 +160,25 @@
       visibility: visible
       opacity: 1
       transform: translateY(-50px)
+
+@media (min-width: 320px) AND (max-width: 720px)
+  .jumbotron
+    height: auto
+    position: static
+
+  .jumbotron-headline > h1
+    //TODO Change to 100% when top section is set to normal width
+    width: 90vw
+
+  .jumbotron-service
+    position: relative
+    height: 66px
+    width: 66px
+    background: $text-color-white
+    border-radius: 50%
+    box-shadow: 0 3px 10px 2px rgba(226, 226, 226, 1)
+    img
+      width: 60%
+      height: 60%
+      visibility: visible
+      opacity: 1
