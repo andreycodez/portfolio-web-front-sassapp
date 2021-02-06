@@ -331,7 +331,18 @@ body {
     .jumbotron-service img {
       grid-column: 1/span 1;
       align-self: center;
-      justify-self: center; } }
+      justify-self: center; }
+
+  .key-benefits {
+    grid-column: 2/span 1; }
+
+  .key-benefits-cards-container {
+    grid-column: 2/span 1;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px; } }
 .subtext {
   color: #677788; }
 
@@ -745,15 +756,8 @@ q {
     width: 90vw; }
 
   .jumbotron-service {
-    position: relative;
-    height: 66px;
-    width: 66px;
-    background: #FFFFFF;
-    border-radius: 50%;
-    box-shadow: 0 3px 10px 2px #e2e2e2; }
+    position: relative; }
     .jumbotron-service img {
-      width: 60%;
-      height: 60%;
       visibility: visible;
       opacity: 1; } }
 .key-benefits-container {
