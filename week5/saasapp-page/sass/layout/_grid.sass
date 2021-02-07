@@ -246,8 +246,48 @@
     grid-template-columns: minmax(10px, 1fr) minmax(1180px, 1fr) minmax(10px, 1fr)
 
 @media (min-width: 320px) AND (max-width: 720px)
+  .main-grid
+    grid-template-columns: 16px 1fr 16px
+
   .main-grid-wide
-    grid-template-columns: minmax(16px, 1fr) 1fr minmax(16px, 1fr)
+    grid-template-columns: 16px 1fr 16px
+
+
+  // PREHEADER
+
+  //HEADER
+
+  .header
+    grid-column: 2 / span 1
+    display: grid
+    grid-auto-flow: row
+    grid-template-columns: 1fr
+    align-items: center
+    gap: 30px
+
+  .header-logo-section
+    grid-column: 1 / span 1
+    a
+      display: grid
+      grid-template-columns: min-content
+      img
+        grid-column: 1 / span 1
+        align-self: center
+
+  .header-top-menu
+    grid-column: 2 / span 1
+    justify-self: end
+    align-self: center
+
+  .header-top-menu-list
+    display: grid
+    grid-auto-flow: column
+    grid-auto-columns: min-content
+
+  .header-top-menu-buy-button
+    align-self: center
+    justify-self: end
+
 
   // JUMBOTRON
   .jumbotron
