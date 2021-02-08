@@ -1,0 +1,25 @@
+// PREHEADER
+.preheader
+  grid-column: 2 / span 1
+  display: grid
+  grid-template-columns: 1fr 1fr
+  .preheader-left-side
+    grid-column: 1 / span 1
+    align-self: center
+  .preheader-right-side
+    grid-column: 2 / span 1
+    justify-self: end
+    align-self: center
+
+.preheader-right-side-menu
+  display: grid
+  grid-auto-flow: column
+
+.preheader-right-side-menu > li, .preheader-left-side-menu > li
+  display: grid
+  grid-template-columns: min-content
+  grid-auto-flow: column
+  gap: 10px
+
+@media (min-width: 320px) AND (max-width: 720px)
+  // PREHEADER
