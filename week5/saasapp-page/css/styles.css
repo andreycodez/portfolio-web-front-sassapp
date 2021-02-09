@@ -109,126 +109,6 @@ body {
 .content-grid-wide {
   grid-column: 1/span 3; }
 
-.key-benefits {
-  grid-column: 2/span 1; }
-
-.key-benefits-cards-container {
-  grid-column: 2/span 1;
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px; }
-
-.banner-one-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 30px auto auto;
-  gap: 20px; }
-
-.banner-one-text {
-  grid-column: 2/span 1;
-  align-self: center;
-  justify-self: start; }
-
-.banner-one-image {
-  grid-column: 3/span 1;
-  align-self: end;
-  justify-self: end; }
-
-.why-front-bullets-list {
-  display: grid;
-  grid-template-columns: auto;
-  grid-auto-flow: column; }
-
-.why-front-bullet-item .bullet {
-  display: grid;
-  grid-template-columns: 1fr min-content 1fr;
-  gap: 6px; }
-  .why-front-bullet-item .bullet::before {
-    align-self: center;
-    grid-column: 1/span 1; }
-  .why-front-bullet-item .bullet::after {
-    align-self: center;
-    grid-column: 3/span 1; }
-  .why-front-bullet-item .bullet .bullet-inner {
-    grid-column: 2/span 1; }
-
-.why-front-image {
-  display: grid;
-  grid-template-columns: 30px auto 30px; }
-  .why-front-image img {
-    grid-column: 2/span 1; }
-
-.hubspot-container {
-  display: grid;
-  grid-template-columns: min-content auto;
-  gap: 80px; }
-
-.hubspot-text {
-  align-self: center; }
-
-.trusted-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: auto; }
-
-.hire-us-form {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 160px; }
-  .hire-us-form .photo-stack {
-    display: grid;
-    grid-template-columns: repeat(3, 60px);
-    grid-template-rows: 60px;
-    gap: 20px; }
-    .hire-us-form .photo-stack img {
-      justify-self: flex-start;
-      align-self: center; }
-
-.form-container > form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px; }
-  .form-container > form input.input-field {
-    grid-column: span 1; }
-  .form-container > form textarea {
-    grid-column: span 2; }
-  .form-container > form .privacy-policy {
-    grid-column: span 2;
-    display: grid;
-    grid-template-columns: 20px 1fr; }
-  .form-container > form .submit-button {
-    grid-column: span 2; }
-  .form-container > form .select-field {
-    grid-column: span 1; }
-
-.footer-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px; }
-
-.post-footer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  align-items: center; }
-
-.footer-breadcrumb {
-  grid-column: 1/span 1; }
-
-.footer-breadcrumb-item {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: min-content 15px;
-  gap: 10px; }
-
-.footer-socials {
-  grid-column: 2/span 1; }
-
-.footer-post-text {
-  grid-column: 1/-1; }
-
 @media (min-width: 1200px) {
   .main-grid {
     grid-template-columns: minmax(60px, 1fr) minmax(1080px, 1fr) minmax(60px, 1fr); }
@@ -240,18 +120,7 @@ body {
     grid-template-columns: 16px 1fr 16px; }
 
   .main-grid-wide {
-    grid-template-columns: 16px 1fr 16px; }
-
-  .key-benefits {
-    grid-column: 2/span 1; }
-
-  .key-benefits-cards-container {
-    grid-column: 2/span 1;
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 20px; } }
+    grid-template-columns: 16px 1fr 16px; } }
 .preheader {
   grid-column: 2/span 1;
   display: grid;
@@ -377,6 +246,152 @@ body {
       grid-column: 1/span 1;
       align-self: center;
       justify-self: center; } }
+.key-benefits {
+  grid-column: 2/span 1; }
+
+.key-benefits-cards-container {
+  grid-column: 2/span 1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px; }
+
+.banner-one-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 30px auto auto;
+  gap: 20px; }
+
+.banner-one-text {
+  grid-column: 2/span 1;
+  align-self: center;
+  justify-self: start; }
+
+.banner-one-image {
+  grid-column: 3/span 1;
+  align-self: end;
+  justify-self: end; }
+
+@media (min-width: 320px) and (max-width: 720px) {
+  .key-benefits {
+    grid-column: 2/span 1; }
+
+  .key-benefits-cards-container {
+    grid-column: 2/span 1;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px; } }
+.why-front-bullets-list {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column; }
+
+.why-front-bullet-item .bullet {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  gap: 6px; }
+  .why-front-bullet-item .bullet::before {
+    align-self: center;
+    grid-column: 1/span 1; }
+  .why-front-bullet-item .bullet::after {
+    align-self: center;
+    grid-column: 3/span 1; }
+  .why-front-bullet-item .bullet .bullet-inner {
+    grid-column: 2/span 1; }
+
+.why-front-image {
+  display: grid;
+  grid-template-columns: 30px auto 30px; }
+  .why-front-image img {
+    grid-column: 2/span 1; }
+
+.hubspot-container {
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: 80px; }
+
+.hubspot-text {
+  align-self: center; }
+
+.pricing-plans-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px; }
+
+.main-plan {
+  grid-column: 1/span 1;
+  grid-row: 1/-1;
+  padding: 40px;
+  display: grid; }
+
+.main-plan-content {
+  align-self: center; }
+
+.trusted-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto; }
+
+.hire-us-form {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 160px; }
+  .hire-us-form .photo-stack {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: 60px;
+    gap: 20px; }
+    .hire-us-form .photo-stack img {
+      justify-self: flex-start;
+      align-self: center; }
+
+.form-container > form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; }
+  .form-container > form input.input-field {
+    grid-column: span 1; }
+  .form-container > form textarea {
+    grid-column: span 2; }
+  .form-container > form .privacy-policy {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 20px 1fr; }
+  .form-container > form .submit-button {
+    grid-column: span 2; }
+  .form-container > form .select-field {
+    grid-column: span 1; }
+
+.footer-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px; }
+
+.post-footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: center; }
+
+.footer-breadcrumb {
+  grid-column: 1/span 1; }
+
+.footer-breadcrumb-item {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: min-content 15px;
+  gap: 10px; }
+
+.footer-socials {
+  grid-column: 2/span 1; }
+
+.footer-post-text {
+  grid-column: 1/-1; }
+
 .subtext {
   color: #677788; }
 
@@ -905,18 +920,6 @@ q {
   width: 100px;
   margin: auto; }
 
-.pricing-plans-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 40px; }
-
-.main-plan {
-  grid-column: 1/span 1;
-  grid-row: 1/-1;
-  padding: 40px;
-  display: grid; }
-
 .pricing-info h3 {
   margin: 20px 0 10px 0; }
 .pricing-info .subtext {
@@ -924,23 +927,21 @@ q {
   line-height: 22px;
   margin-bottom: 10px; }
 
-.main-plan-content {
-  align-self: center; }
-  .main-plan-content .price {
-    padding-bottom: 30px;
-    border-bottom: 1px solid #677788; }
-    .main-plan-content .price .price-sum {
-      font-size: 50px; }
-    .main-plan-content .price .price-sub {
-      color: #677788; }
-  .main-plan-content .subtext {
-    margin-top: 30px;
-    line-height: 24px;
-    margin-bottom: 20px; }
-  .main-plan-content .specialtext {
-    font-size: 12px; }
-  .main-plan-content a {
-    margin-top: 40px; }
+.main-plan-content .price {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #677788; }
+  .main-plan-content .price .price-sum {
+    font-size: 50px; }
+  .main-plan-content .price .price-sub {
+    color: #677788; }
+.main-plan-content .subtext {
+  margin-top: 30px;
+  line-height: 24px;
+  margin-bottom: 20px; }
+.main-plan-content .specialtext {
+  font-size: 12px; }
+.main-plan-content a {
+  margin-top: 40px; }
 
 @media (min-width: 1024px) {
   .pricing-info {
