@@ -291,11 +291,6 @@ body {
 .hubspot-text {
   align-self: center; }
 
-.trusted-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: auto; }
-
 .subtext {
   color: #677788; }
 
@@ -862,6 +857,11 @@ q {
     line-height: 36px; }
   .hubspot-text img.hubspot-logo {
     width: 100px; }
+
+.trusted-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto; }
 
 .trusted-item {
   width: 100px;
