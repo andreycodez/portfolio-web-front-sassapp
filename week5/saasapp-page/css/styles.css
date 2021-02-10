@@ -296,63 +296,6 @@ body {
   grid-auto-flow: column;
   grid-auto-columns: auto; }
 
-.hire-us-form {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 160px; }
-  .hire-us-form .photo-stack {
-    display: grid;
-    grid-template-columns: repeat(3, 60px);
-    grid-template-rows: 60px;
-    gap: 20px; }
-    .hire-us-form .photo-stack img {
-      justify-self: flex-start;
-      align-self: center; }
-
-.form-container > form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px; }
-  .form-container > form input.input-field {
-    grid-column: span 1; }
-  .form-container > form textarea {
-    grid-column: span 2; }
-  .form-container > form .privacy-policy {
-    grid-column: span 2;
-    display: grid;
-    grid-template-columns: 20px 1fr; }
-  .form-container > form .submit-button {
-    grid-column: span 2; }
-  .form-container > form .select-field {
-    grid-column: span 1; }
-
-.footer-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px; }
-
-.post-footer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  align-items: center; }
-
-.footer-breadcrumb {
-  grid-column: 1/span 1; }
-
-.footer-breadcrumb-item {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: min-content 15px;
-  gap: 10px; }
-
-.footer-socials {
-  grid-column: 2/span 1; }
-
-.footer-post-text {
-  grid-column: 1/-1; }
-
 .subtext {
   color: #677788; }
 
@@ -988,19 +931,29 @@ q {
   background-color: #20335B; }
 
 .hire-us-form {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 160px;
   padding: 50px; }
   .hire-us-form .description > .subtext {
     color: #BDC2CE;
     font-size: 14px; }
   .hire-us-form .employee-info > .employee-job {
     color: #BDC2CE; }
-  .hire-us-form .photo-stack img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; }
-    .hire-us-form .photo-stack img:hover {
-      width: 60px;
-      height: 60px; }
+  .hire-us-form .photo-stack {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: 60px;
+    gap: 20px; }
+    .hire-us-form .photo-stack img {
+      justify-self: flex-start;
+      align-self: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%; }
+      .hire-us-form .photo-stack img:hover {
+        width: 60px;
+        height: 60px; }
 
 .reversed-color {
   color: #FFFFFF; }
@@ -1022,45 +975,61 @@ q {
   .form label {
     display: none; }
 
-.form-container > form input.input-field {
-  height: 40px;
-  max-width: 100%;
-  padding: 0 10px;
-  outline: none;
-  border: 1px solid #E6E8F2;
-  border-radius: 3px; }
-.form-container > form textarea {
-  padding: 10px;
-  border: 1px solid #E6E8F2;
-  border-radius: 3px;
-  font-size: 14px; }
-.form-container > form .privacy-policy a {
-  text-decoration: none;
-  color: #677788;
-  border-bottom: 1px dashed #677788; }
-.form-container > form .submit-button {
-  height: 40px;
-  background-color: #2576FF;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  color: #FFFFFF;
-  font-weight: bold; }
-.form-container > form .select-field {
-  height: 40px;
-  max-width: 100%;
-  border: 1px solid #E6E8F2;
-  border-radius: 3px;
-  padding: 0 30px 0 10px;
-  -webkit-appearance: none;
-  background-image: url("../images/icons/angle-down@2x.png");
-  background-repeat: no-repeat;
-  background-size: 4%;
-  background-position: 92% 50%; }
-.form-container > form .checkbox-field {
-  outline: 1px solid #E6E8F2; }
+.form-container > form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; }
+  .form-container > form input.input-field {
+    grid-column: span 1;
+    height: 40px;
+    max-width: 100%;
+    padding: 0 10px;
+    outline: none;
+    border: 1px solid #E6E8F2;
+    border-radius: 3px; }
+  .form-container > form textarea {
+    grid-column: span 2;
+    padding: 10px;
+    border: 1px solid #E6E8F2;
+    border-radius: 3px;
+    font-size: 14px; }
+  .form-container > form .privacy-policy {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 20px 1fr; }
+    .form-container > form .privacy-policy a {
+      text-decoration: none;
+      color: #677788;
+      border-bottom: 1px dashed #677788; }
+  .form-container > form .submit-button {
+    grid-column: span 2;
+    height: 40px;
+    background-color: #2576FF;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: bold; }
+  .form-container > form .select-field {
+    grid-column: span 1;
+    height: 40px;
+    max-width: 100%;
+    border: 1px solid #E6E8F2;
+    border-radius: 3px;
+    padding: 0 30px 0 10px;
+    -webkit-appearance: none;
+    background-image: url("../images/icons/angle-down@2x.png");
+    background-repeat: no-repeat;
+    background-size: 4%;
+    background-position: 92% 50%; }
+  .form-container > form .checkbox-field {
+    outline: 1px solid #E6E8F2; }
 
 .footer-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
   padding-bottom: 30px; }
 
 .bottom-menu > h3 {
@@ -1085,23 +1054,36 @@ q {
     font-size: 12px; }
 
 .post-footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: center;
   border-top: 1px solid #E6E9F2;
   padding-top: 30px;
   margin-bottom: 20px; }
+
+.footer-breadcrumb {
+  grid-column: 1/span 1; }
 
 .footer-breadcrumb-list {
   display: flex;
   flex-direction: row; }
 
-.footer-breadcrumb-item::after {
-  font-family: "Font Awesome 5 Pro";
-  font-weight: 100;
-  content: "";
-  color: #677788; }
-.footer-breadcrumb-item:last-child::after {
-  content: unset; }
+.footer-breadcrumb-item {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: min-content 15px;
+  gap: 10px; }
+  .footer-breadcrumb-item::after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 100;
+    content: "";
+    color: #677788; }
+  .footer-breadcrumb-item:last-child::after {
+    content: unset; }
 
 .footer-socials {
+  grid-column: 2/span 1;
   display: flex;
   justify-content: flex-end; }
 
