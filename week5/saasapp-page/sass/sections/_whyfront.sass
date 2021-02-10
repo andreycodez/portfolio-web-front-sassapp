@@ -1,4 +1,7 @@
 .why-front-bullets-list
+  display: grid
+  grid-template-columns: auto
+  grid-auto-flow: column
   .why-front-bullet-item:first-child > .bullet:before,
   .why-front-bullet-item:last-child > .bullet:after
     content: unset
@@ -7,12 +10,22 @@
   display: flex
   flex-direction: column
   .bullet
+    display: grid
+    grid-template-columns: 1fr min-content 1fr
+    gap: 6px
+    &::before
+      align-self: center
+      grid-column: 1 / span 1
+    &::after
+      align-self: center
+      grid-column: 3 / span 1
     &::before, &::after
       content: ""
       height: 1px
       width: 100%
       background-color: #E6E9F2
     .bullet-inner
+      grid-column: 2 / span 1
       width: 50px
       height: 50px
       background-color: #ECF2FF
@@ -30,5 +43,34 @@
     text-align: center
 
 .why-front-image
+  display: grid
+  grid-template-columns: 30px auto 30px
   img
+    grid-column: 1 / -1
     width: 100%
+
+@media (min-width: 320px) AND (max-width: 720px)
+  .why-front-bullets-list
+    .why-front-bullet-item > .bullet:before,
+    .why-front-bullet-item > .bullet:after
+      all: unset
+
+  .why-front-bullets-list
+    grid-auto-flow: row
+    gap: 30px
+
+  .why-front-bullet-item
+    display: grid
+    grid-template-columns: min-content 1fr
+    gap: 20px
+    .bullet
+      grid-column: 1 / span 1
+      display: grid
+      grid-template-columns: min-content
+      gap: 6px
+      .bullet-inner
+        grid-column: 2 / span 1
+        grid-row: 1 / span 1
+    span
+      grid-column: 2 / span 1
+      justify-self: start
