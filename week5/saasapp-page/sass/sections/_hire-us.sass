@@ -2,6 +2,9 @@
   background-color: #20335B
 
 .hire-us-form
+  display: grid
+  grid-auto-flow: column
+  gap: 160px
   padding: 50px
   .description > .subtext
     color: #BDC2CE
@@ -9,7 +12,13 @@
   .employee-info > .employee-job
     color: #BDC2CE
   .photo-stack
+    display: grid
+    grid-template-columns: repeat(3, 60px)
+    grid-template-rows: 60px
+    gap: 20px
     img
+      justify-self: flex-start
+      align-self: center
       width: 40px
       height: 40px
       border-radius: 50%
@@ -37,7 +46,11 @@ q
     display: none
 
 .form-container > form
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 20px
   input.input-field
+    grid-column: span 1
     height: 40px
     max-width: 100%
     padding: 0 10px
@@ -45,16 +58,21 @@ q
     border: 1px solid #E6E8F2
     border-radius: 3px
   textarea
+    grid-column: span 2
     padding: 10px
     border: 1px solid #E6E8F2
     border-radius: 3px
     font-size: 14px
   .privacy-policy
+    grid-column: span 2
+    display: grid
+    grid-template-columns: 20px 1fr
     a
       text-decoration: none
       color: $text-color-regular
       border-bottom: 1px dashed $text-color-regular
   .submit-button
+    grid-column: span 2
     height: 40px
     background-color: $main-color-blue
     outline: none
@@ -63,6 +81,7 @@ q
     color: #FFFFFF
     font-weight: bold
   .select-field
+    grid-column: span 1
     height: 40px
     max-width: 100%
     border: 1px solid #E6E8F2
