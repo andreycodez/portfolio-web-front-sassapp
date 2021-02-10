@@ -121,47 +121,6 @@ body {
 
   .main-grid-wide {
     grid-template-columns: 16px 1fr 16px; } }
-.jumbotron {
-  grid-column: 2/span 1;
-  grid-row: 3/span 1;
-  display: grid;
-  gap: 130px;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-flow: column; }
-
-.jumbotron-headline > .actions {
-  display: grid;
-  grid-template-columns: min-content min-content;
-  align-items: center;
-  gap: 30px; }
-
-.jumbotron-service {
-  display: grid;
-  grid-template-columns: 1fr; }
-  .jumbotron-service img {
-    grid-column: 1/span 1;
-    align-self: center;
-    justify-self: center; }
-
-@media (min-width: 320px) and (max-width: 720px) {
-  .jumbotron {
-    gap: 30px;
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content min-content; }
-
-  .jumbotron-headline > .actions {
-    display: grid;
-    grid-template-columns: min-content min-content;
-    align-items: center;
-    gap: 30px; }
-
-  .jumbotron-service {
-    display: grid;
-    grid-template-columns: 1fr; }
-    .jumbotron-service img {
-      grid-column: 1/span 1;
-      align-self: center;
-      justify-self: center; } }
 .key-benefits {
   grid-column: 2/span 1; }
 
@@ -528,6 +487,12 @@ q {
     align-self: center;
     justify-self: end; } }
 .jumbotron {
+  grid-column: 2/span 1;
+  grid-row: 3/span 1;
+  display: grid;
+  gap: 130px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
   height: 480px;
   position: relative;
   top: 140px; }
@@ -542,6 +507,10 @@ q {
   color: #677788; }
 
 .jumbotron-headline > .actions {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  align-items: center;
+  gap: 30px;
   margin-top: 30px;
   color: #677788; }
   .jumbotron-headline > .actions a {
@@ -564,6 +533,8 @@ q {
   position: relative; }
 
 .jumbotron-service {
+  display: grid;
+  grid-template-columns: 1fr;
   position: absolute;
   height: 66px;
   width: 66px;
@@ -571,6 +542,9 @@ q {
   border-radius: 50%;
   box-shadow: 0 3px 10px 2px #e2e2e2; }
   .jumbotron-service img {
+    grid-column: 1/span 1;
+    align-self: center;
+    justify-self: center;
     width: 60%;
     height: 60%;
     visibility: hidden;
@@ -685,15 +659,29 @@ q {
       transform: translateY(-50px); } } }
 @media (min-width: 320px) and (max-width: 720px) {
   .jumbotron {
+    gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content;
     height: auto;
     position: static; }
+
+  .jumbotron-headline > .actions {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    align-items: center;
+    gap: 30px; }
 
   .jumbotron-headline > h1 {
     width: 90vw; }
 
   .jumbotron-service {
+    display: grid;
+    grid-template-columns: 1fr;
     position: relative; }
     .jumbotron-service img {
+      grid-column: 1/span 1;
+      align-self: center;
+      justify-self: center;
       visibility: visible;
       opacity: 1; } }
 .key-benefits-container {
