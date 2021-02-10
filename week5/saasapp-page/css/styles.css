@@ -283,51 +283,12 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 20px; } }
-.why-front-bullets-list {
-  display: grid;
-  grid-template-columns: auto;
-  grid-auto-flow: column; }
-
-.why-front-bullet-item .bullet {
-  display: grid;
-  grid-template-columns: 1fr min-content 1fr;
-  gap: 6px; }
-  .why-front-bullet-item .bullet::before {
-    align-self: center;
-    grid-column: 1/span 1; }
-  .why-front-bullet-item .bullet::after {
-    align-self: center;
-    grid-column: 3/span 1; }
-  .why-front-bullet-item .bullet .bullet-inner {
-    grid-column: 2/span 1; }
-
-.why-front-image {
-  display: grid;
-  grid-template-columns: 30px auto 30px; }
-  .why-front-image img {
-    grid-column: 2/span 1; }
-
 .hubspot-container {
   display: grid;
   grid-template-columns: min-content auto;
   gap: 80px; }
 
 .hubspot-text {
-  align-self: center; }
-
-.pricing-plans-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 40px; }
-
-.main-plan {
-  grid-column: 1/span 1;
-  grid-row: 1/-1;
-  padding: 40px;
-  display: grid; }
-
-.main-plan-content {
   align-self: center; }
 
 .trusted-container {
@@ -860,38 +821,81 @@ q {
   padding-top: 1px;
   padding-left: 2px; }
 
-.why-front-bullets-list .why-front-bullet-item:first-child > .bullet:before,
-.why-front-bullets-list .why-front-bullet-item:last-child > .bullet:after {
-  content: unset; }
+.why-front-bullets-list {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column; }
+  .why-front-bullets-list .why-front-bullet-item:first-child > .bullet:before,
+  .why-front-bullets-list .why-front-bullet-item:last-child > .bullet:after {
+    content: unset; }
 
 .why-front-bullet-item {
   display: flex;
   flex-direction: column; }
-  .why-front-bullet-item .bullet::before, .why-front-bullet-item .bullet::after {
-    content: "";
-    height: 1px;
-    width: 100%;
-    background-color: #E6E9F2; }
-  .why-front-bullet-item .bullet .bullet-inner {
-    width: 50px;
-    height: 50px;
-    background-color: #ECF2FF;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .why-front-bullet-item .bullet .bullet-inner .dot {
-      width: 5px;
-      height: 5px;
-      background-color: #0066FF;
-      border-radius: 50%; }
+  .why-front-bullet-item .bullet {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    gap: 6px; }
+    .why-front-bullet-item .bullet::before {
+      align-self: center;
+      grid-column: 1/span 1; }
+    .why-front-bullet-item .bullet::after {
+      align-self: center;
+      grid-column: 3/span 1; }
+    .why-front-bullet-item .bullet::before, .why-front-bullet-item .bullet::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: #E6E9F2; }
+    .why-front-bullet-item .bullet .bullet-inner {
+      grid-column: 2/span 1;
+      width: 50px;
+      height: 50px;
+      background-color: #ECF2FF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .why-front-bullet-item .bullet .bullet-inner .dot {
+        width: 5px;
+        height: 5px;
+        background-color: #0066FF;
+        border-radius: 50%; }
   .why-front-bullet-item span {
     margin-top: 20px;
     text-align: center; }
 
-.why-front-image img {
-  width: 100%; }
+.why-front-image {
+  display: grid;
+  grid-template-columns: 30px auto 30px; }
+  .why-front-image img {
+    grid-column: 1/-1;
+    width: 100%; }
 
+@media (min-width: 320px) and (max-width: 720px) {
+  .why-front-bullets-list .why-front-bullet-item > .bullet:before,
+  .why-front-bullets-list .why-front-bullet-item > .bullet:after {
+    all: unset; }
+
+  .why-front-bullets-list {
+    grid-auto-flow: row;
+    gap: 30px; }
+
+  .why-front-bullet-item {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 20px; }
+    .why-front-bullet-item .bullet {
+      grid-column: 1/span 1;
+      display: grid;
+      grid-template-columns: min-content;
+      gap: 6px; }
+      .why-front-bullet-item .bullet .bullet-inner {
+        grid-column: 2/span 1;
+        grid-row: 1/span 1; }
+    .why-front-bullet-item span {
+      grid-column: 2/span 1;
+      justify-self: start; } }
 .hubspot-image {
   position: relative;
   width: 480px;
@@ -920,6 +924,18 @@ q {
   width: 100px;
   margin: auto; }
 
+.pricing-plans-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px; }
+
+.main-plan {
+  grid-column: 1/span 1;
+  grid-row: 1/-1;
+  padding: 40px;
+  display: grid; }
+
 .pricing-info h3 {
   margin: 20px 0 10px 0; }
 .pricing-info .subtext {
@@ -927,21 +943,23 @@ q {
   line-height: 22px;
   margin-bottom: 10px; }
 
-.main-plan-content .price {
-  padding-bottom: 30px;
-  border-bottom: 1px solid #677788; }
-  .main-plan-content .price .price-sum {
-    font-size: 50px; }
-  .main-plan-content .price .price-sub {
-    color: #677788; }
-.main-plan-content .subtext {
-  margin-top: 30px;
-  line-height: 24px;
-  margin-bottom: 20px; }
-.main-plan-content .specialtext {
-  font-size: 12px; }
-.main-plan-content a {
-  margin-top: 40px; }
+.main-plan-content {
+  align-self: center; }
+  .main-plan-content .price {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #677788; }
+    .main-plan-content .price .price-sum {
+      font-size: 50px; }
+    .main-plan-content .price .price-sub {
+      color: #677788; }
+  .main-plan-content .subtext {
+    margin-top: 30px;
+    line-height: 24px;
+    margin-bottom: 20px; }
+  .main-plan-content .specialtext {
+    font-size: 12px; }
+  .main-plan-content a {
+    margin-top: 40px; }
 
 @media (min-width: 1024px) {
   .pricing-info {
