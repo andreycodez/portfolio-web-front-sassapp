@@ -1086,6 +1086,9 @@ q {
   color: #677788;
   font-size: 12px; }
 
+.footer-socials a:first-child > .footer-social-item {
+  margin-left: 0; }
+
 .footer-socials > select {
   padding: 0 30px 0 15px;
   -webkit-appearance: none;
@@ -1108,5 +1111,17 @@ q {
     line-height: 20px;
     width: 70%;
     margin: auto; }
+
+@media (min-width: 0px) and (max-width: 720px) {
+  .footer-socials {
+    grid-column: 1/span 1;
+    justify-content: flex-start; }
+
+  .footer-post-text {
+    grid-column: 1/span 1; }
+    .footer-post-text p {
+      text-align: left;
+      margin: 0;
+      width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */
