@@ -1,26 +1,37 @@
 .banner-one-container
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: 30px auto auto
+  gap: 20px
   background-color: #F8FAFE
   height: 480px
   overflow: hidden
 
+.banner-one-text
+  grid-column: 2 / span 1
+  align-self: center
+  justify-self: start
+
 .banner-one-image
-  img
+  grid-column: 3 / span 1
+  align-self: end
+  justify-self: end
+
+@media (min-width: 1024px)
+  .banner-one-image > img
     height: 360px
     position: relative
     top: 578px
     visibility: hidden
     opacity: 0
-  img.appear-on-scroll
+
+  .banner-one-image > img.appear-on-scroll
     animation-name: banner-one-image-appear
     animation-fill-mode: forwards
     animation-duration: 1s
     -webkit-animation-name: banner-one-image-appear
     -webkit-animation-fill-mode: forwards
     -webkit-animation-duration: 1s
-
-
-@media (min-width: 1024px)
-
 
   @keyframes banner-one-image-appear
     0%
@@ -33,3 +44,18 @@
       visibility: visible
       opacity: 1
       transform: translateY(-574px)
+
+@media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen)
+  .banner-one-image > img
+    width: 100%
+
+  .banner-one-container
+    grid-template-columns: 1fr
+    grid-auto-flow: row
+    height: 140%
+
+  .banner-one-text
+    align-self: center
+    justify-self: start
+
+  .banner-one-image
