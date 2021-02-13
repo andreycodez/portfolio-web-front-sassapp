@@ -465,49 +465,51 @@
                         <li><i class="fa fa-phone"></i><a href="#" class="menu">+1 (062) 109-9222</a></li>
                     </ul>
                 </div>
-                <div class="bottom-menu">
-                    <h3>Company</h3>
-                    <nav>
-                        <ul class="bottom-menu-list">
-                            <li><a href="#" class="menu">About</a></li>
-                            <li><a href="#" class="menu">Careers</a><span>We're hiring</span></li>
-                            <li><a href="#" class="menu">Blog</a></li>
-                            <li><a href="#" class="menu">Customers</a></li>
-                            <li><a href="#" class="menu">Hire us</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="bottom-menu">
-                    <h3>Features</h3>
-                    <nav>
-                        <ul class="bottom-menu-list">
-                            <li><a href="#" class="menu">Press</a></li>
-                            <li><a href="#" class="menu">Release notes</a></li>
-                            <li><a href="#" class="menu">Integrations</a></li>
-                            <li><a href="#" class="menu">Pricing</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="bottom-menu">
-                    <h3>Documentation</h3>
-                    <nav>
-                        <ul class="bottom-menu-list">
-                            <li><a href="#" class="menu">Support</a></li>
-                            <li><a href="#" class="menu">Docs</a></li>
-                            <li><a href="#" class="menu">Status</a></li>
-                            <li><a href="#" class="menu">API Reference</a></li>
-                            <li><a href="#" class="menu">Tech Requirements</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="bottom-menu">
-                    <h3>Resources</h3>
-                    <nav>
-                        <ul class="bottom-menu-list">
-                            <li><i class="fa fa-info-circle"></i><a href="" class="menu">Help</a></li>
-                            <li><i class="fa fa-user-circle"></i><a href="" class="menu">Your Account</a></li>
-                        </ul>
-                    </nav>
+                <div class="bottom-menu-stack">
+                    <div class="bottom-menu">
+                        <h3>Company</h3>
+                        <nav>
+                            <ul class="bottom-menu-list">
+                                <li><a href="#" class="menu">About</a></li>
+                                <li><a href="#" class="menu">Careers</a><span>We're hiring</span></li>
+                                <li><a href="#" class="menu">Blog</a></li>
+                                <li><a href="#" class="menu">Customers</a></li>
+                                <li><a href="#" class="menu">Hire us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="bottom-menu">
+                        <h3>Features</h3>
+                        <nav>
+                            <ul class="bottom-menu-list">
+                                <li><a href="#" class="menu">Press</a></li>
+                                <li><a href="#" class="menu">Release notes</a></li>
+                                <li><a href="#" class="menu">Integrations</a></li>
+                                <li><a href="#" class="menu">Pricing</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="bottom-menu">
+                        <h3>Documentation</h3>
+                        <nav>
+                            <ul class="bottom-menu-list">
+                                <li><a href="#" class="menu">Support</a></li>
+                                <li><a href="#" class="menu">Docs</a></li>
+                                <li><a href="#" class="menu">Status</a></li>
+                                <li><a href="#" class="menu">API Reference</a></li>
+                                <li><a href="#" class="menu">Tech Requirements</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="bottom-menu">
+                        <h3>Resources</h3>
+                        <nav>
+                            <ul class="bottom-menu-list">
+                                <li><i class="fa fa-info-circle"></i><a href="" class="menu">Help</a></li>
+                                <li><i class="fa fa-user-circle"></i><a href="" class="menu">Your Account</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
             <div class="content-grid post-footer">
@@ -549,49 +551,55 @@
         </footer>
         <script type="text/javascript">
             $(window).scroll(function() {
-                let scroll = $(window).scrollTop();
-                if (scroll >= 800) {
-                    $('#img-movable').addClass("appear-on-scroll");
+                let viewPortWidth = $(window).width()
+                if (viewPortWidth >= 1024) {
+                    let scroll = $(window).scrollTop();
+                    if (scroll >= 800) {
+                        $('#img-movable').addClass("appear-on-scroll");
+                    }
+                    if (scroll >= 2900) {
+                        $('.pricing-info').addClass("animated-pricing");
+                    }
+                    if (scroll >= 600) {
+                        $('#sticky-header').addClass("main-grid-sticky-header");
+                        $('#header-extender-on-roll-out').addClass("header-extender");
+                        $("#sticky-header").removeClass("header-close");
+                    } else if ((scroll < 600) && (scroll >= 200)) {
+                        $("#sticky-header").addClass("header-close");
+                    } else {
+                        $("#sticky-header").removeClass("main-grid-sticky-header");
+                        $("#header-extender-on-roll-out").removeClass("header-extender");
+                        $("#sticky-header").removeClass("header-close");
+                    }
+                    if (scroll >= 600) {
+                        $("#top-link-home").removeClass("active");
+                    } else {
+                        $("#top-link-home").addClass("active");
+                    }
+                    if ((scroll > 599) && (scroll <= 1700)) {
+                        $("#top-link-features").addClass("active");
+                    } else {
+                        $("#top-link-features").removeClass("active");
+                    }
+                    if ((scroll > 1699) && (scroll <= 3370)) {
+                        $("#top-link-learn").addClass("active");
+                    } else {
+                        $("#top-link-learn").removeClass("active");
+                    }
+                    if ((scroll > 3369) && (scroll <= 4040)) {
+                        $("#top-link-pricing").addClass("active");
+                    } else {
+                        $("#top-link-pricing").removeClass("active");
+                    }
+                    if (scroll > 4039) {
+                        $("#top-link-hire-us").addClass("active");
+                    } else {
+                        $("#top-link-hire-us").removeClass("active");
+                    }
+
                 }
-                if (scroll >= 2900) {
-                    $('.pricing-info').addClass("animated-pricing");
-                }
-                if (scroll >= 600) {
-                    $('#sticky-header').addClass("main-grid-sticky-header");
-                    $('#header-extender-on-roll-out').addClass("header-extender");
-                    $("#sticky-header").removeClass("header-close");
-                } else if ((scroll < 600) && (scroll >= 200)) {
-                    $("#sticky-header").addClass("header-close");
-                } else {
-                    $("#sticky-header").removeClass("main-grid-sticky-header");
-                    $("#header-extender-on-roll-out").removeClass("header-extender");
-                    $("#sticky-header").removeClass("header-close");
-                }
-                if (scroll >= 600) {
-                    $("#top-link-home").removeClass("active");
-                } else {
-                    $("#top-link-home").addClass("active");
-                }
-                if ((scroll > 599) && (scroll <= 1700)) {
-                    $("#top-link-features").addClass("active");
-                } else {
-                    $("#top-link-features").removeClass("active");
-                }
-                if ((scroll > 1699) && (scroll <= 3370)) {
-                    $("#top-link-learn").addClass("active");
-                } else {
-                    $("#top-link-learn").removeClass("active");
-                }
-                if ((scroll > 3369) && (scroll <= 4040)) {
-                    $("#top-link-pricing").addClass("active");
-                } else {
-                    $("#top-link-pricing").removeClass("active");
-                }
-                if (scroll > 4039) {
-                    $("#top-link-hire-us").addClass("active");
-                } else {
-                    $("#top-link-hire-us").removeClass("active");
-                }
+
+
             });
         </script>
     </body>
