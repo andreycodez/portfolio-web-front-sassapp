@@ -1,15 +1,17 @@
 .footer-container
   display: grid
   grid-auto-flow: column
-  grid-template-columns: repeat(5, 1fr)
+  grid-template-columns: 1fr 4fr
   gap: 30px
   padding-bottom: 30px
 
-.bottom-menu:first-of-type
-  grid-column: 1 / span 2
-
 .bottom-menu > h3
   padding-bottom: 5px
+
+.bottom-menu-stack
+  width: 100%
+  display: grid
+  grid-auto-flow: column
 
 .bottom-menu-list > li
   padding-bottom: 10px
@@ -109,10 +111,31 @@
     width: 70%
     margin: auto
 
+
+
+
+// TABLET
+
+@media (min-width: $tablet_regular_screen) AND (max-width: $desktop_small_screen)
+  .footer-container
+    grid-template-columns: 1fr 4fr
+    gap: 60px
+  .bottom-menu-stack
+    grid-auto-flow: unset
+    grid-template-columns: repeat(2, 1fr)
+    gap: 40px
+
+
+
+// MOBILE
 @media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen)
   .footer-container
+    grid-template-columns: 1fr
+    grid-auto-flow: row
+  .bottom-menu-stack
     grid-template-columns: 1fr 1fr
     grid-auto-flow: row
+
   .footer-socials
     grid-column: 1 / span 1
     justify-content: flex-start
@@ -125,4 +148,6 @@
       width: 100%
   .post-footer
     grid-template-columns: 1fr
+
+
 
