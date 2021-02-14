@@ -60,24 +60,13 @@
     grid-column: 1 / span 1
     align-self: center
     justify-self: center
-    width: 60%
-    height: 60%
-    visibility: hidden
-    opacity: 0
-
-.service-big
-  height: 90px
-  width: 90px
-  img
-    width: 50%
-    height: 50%
 
 .google
   top: 20px
   left: 20px
 
 .google-ads
-  top: 150px
+  top: 300px
   left: 95px
 
 .atlassian
@@ -100,6 +89,12 @@
   right: 0
 
 @media (min-width: 1024px)
+  .service-big
+    height: 90px
+    width: 90px
+    img
+      width: 50%
+      height: 50%
   .jumbotron-service
     animation-name: image-background-appear
     animation-delay: .2s
@@ -113,6 +108,10 @@
     opacity: 0
     transform: translateY(50px)
     img
+      width: 60%
+      height: 60%
+      visibility: hidden
+      opacity: 0
       animation-name: image-appear
       animation-fill-mode: forwards
       animation-delay: .2s
@@ -176,7 +175,7 @@
       opacity: 1
       transform: translateY(-50px)
 
-@media (min-width: 320px) AND (max-width: 720px)
+@media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen)
   .jumbotron
     gap: 30px
     grid-template-columns: 1fr
