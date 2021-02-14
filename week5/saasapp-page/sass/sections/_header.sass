@@ -72,7 +72,7 @@
 
 
 
-@media (min-width: 1024px)
+@media (min-width: $desktop_small_screen)
   @keyframes sticky-header-appear
     0%
       top: -100px
@@ -80,7 +80,7 @@
     100%
       transform: translateY(100px)
 
-@media (min-width: 320px) AND (max-width: 720px)
+@media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen)
   .header
     grid-column: 2 / span 1
     display: grid
