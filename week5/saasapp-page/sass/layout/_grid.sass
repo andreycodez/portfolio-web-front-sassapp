@@ -28,7 +28,7 @@
 
 
 // TABLET
-@media (min-width: $tablet_regular_screen) AND (max-width: $desktop_small_screen)
+@media (min-width: $tablet_regular_screen) AND (max-width: $desktop_small_screen_max)
   .main-grid
     grid-template-columns: minmax(40px, 1fr) minmax(640px, 1fr) minmax(40px, 1fr)
   .main-grid-wide
@@ -36,7 +36,7 @@
 
 
 // MOBILE
-@media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen)
+@media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen_max)
   .main-grid
     grid-template-columns: 16px 1fr 16px
   .main-grid-wide

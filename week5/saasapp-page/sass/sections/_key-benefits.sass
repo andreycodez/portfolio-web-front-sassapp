@@ -24,13 +24,13 @@
       transition: transform .4s ease-in-out
 
 // TABLET
-@media (min-width: $tablet_regular_screen) AND (max-width: $desktop_small_screen)
+@media (min-width: $tablet_regular_screen) AND (max-width: $desktop_small_screen_max)
   .key-benefits-cards-container
     grid-auto-flow: unset
     grid-template-columns: repeat(2, 1fr)
     margin-top: 20px
 
-@media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen)
+@media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen_max)
   .key-benefits-cards-container
     grid-auto-flow: row
     grid-template-columns: 1fr
