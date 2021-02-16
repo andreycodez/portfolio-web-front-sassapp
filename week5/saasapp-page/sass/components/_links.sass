@@ -15,7 +15,7 @@ a.menu
 a.font-links-12
   font-size: 12px
 
-.back-to-top
+#backToTopButton
   display: flex
   align-items: center
   justify-content: center
@@ -29,4 +29,35 @@ a.font-links-12
   border-radius: 50%
   background: #E1E7EF
 
-.back-to-top-active
+.back-to-top-button-close
+  animation-name: back-to-top-button-hide
+  animation-duration: .2s
+  animation-fill-mode: forwards
+
+.back-to-top-button-open
+  animation-name: back-to-top-button-appear
+  animation-duration: .4s
+  animation-fill-mode: forwards
+
+@keyframes back-to-top-button-hide
+  0%
+    visibility: visible
+    opacity: 1
+  1%
+    visibility: visible
+    opacity: 1
+  100%
+    visibility: hidden
+    opacity: 0
+
+@keyframes back-to-top-button-appear
+  0%
+    visibility: hidden
+    opacity: 0
+  1%
+    visibility: hidden
+    opacity: 0
+  100%
+    visibility: visible
+    opacity: 1
+
