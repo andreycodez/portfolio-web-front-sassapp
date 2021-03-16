@@ -69,3 +69,7 @@
     span
       grid-column: 2 / span 1
       justify-self: start
+
+@media (min-width: $tablet_regular_screen) AND (max-width: $desktop_regular_screen_max)
+  .why-front-bullets-list
+    grid-template-columns: repeat(4, 1fr)
