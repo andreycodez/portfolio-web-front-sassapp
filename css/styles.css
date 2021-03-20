@@ -645,6 +645,51 @@ q {
   top: 320px;
   right: 0; }
 
+@media (min-width: 720px) and (max-width: 1199px) {
+  .jumbotron-service {
+    height: 50px;
+    width: 50px; }
+    .jumbotron-service img {
+      width: 60%;
+      height: 60%; }
+
+  .service-big {
+    height: 70px;
+    width: 70px; }
+    .service-big img {
+      width: 50%;
+      height: 50%; }
+
+  .jumbotron {
+    gap: 30px;
+    top: 80px; }
+
+  .google {
+    top: 0;
+    left: 0px; }
+
+  .google-ads {
+    top: 220px;
+    left: 95px; }
+
+  .atlassian {
+    top: 0;
+    left: 100px; }
+
+  .asana {
+    top: 0;
+    right: 0; }
+
+  .paypal {
+    top: 110px; }
+
+  .weave {
+    top: 130px;
+    right: 100px; }
+
+  .calendar {
+    top: 230px;
+    right: 0; } }
 @media (min-width: 1024px) {
   .service-big {
     height: 90px;
@@ -729,51 +774,6 @@ q {
       visibility: visible;
       opacity: 1;
       transform: translateY(-50px); } } }
-@media (min-width: 720px) {
-  .jumbotron-service {
-    height: 50px;
-    width: 50px; }
-    .jumbotron-service img {
-      width: 60%;
-      height: 60%; }
-
-  .service-big {
-    height: 70px;
-    width: 70px; }
-    .service-big img {
-      width: 50%;
-      height: 50%; }
-
-  .jumbotron {
-    gap: 30px;
-    top: 80px; }
-
-  .google {
-    top: 0;
-    left: 0px; }
-
-  .google-ads {
-    top: 220px;
-    left: 95px; }
-
-  .atlassian {
-    top: 0;
-    left: 100px; }
-
-  .asana {
-    top: 0;
-    right: 0; }
-
-  .paypal {
-    top: 110px; }
-
-  .weave {
-    top: 130px;
-    right: 100px; }
-
-  .calendar {
-    top: 230px;
-    right: 0; } }
 @media (min-width: 0px) and (max-width: 719px) {
   .jumbotron {
     gap: 30px;

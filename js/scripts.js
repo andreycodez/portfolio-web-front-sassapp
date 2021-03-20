@@ -1,5 +1,5 @@
 $(window).scroll(function() {
-    let viewPortWidth = $(window).width()
+    let viewPortWidth = $(window).width();
     let scroll = $(window).scrollTop();
     if (viewPortWidth >= 1024) {
         if (scroll >= 800) {
