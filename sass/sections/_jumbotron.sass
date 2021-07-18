@@ -1,4 +1,4 @@
-.jumbotron
+.jumbotron-content
   grid-column: 2 / span 1
   grid-row: 3 / span 1
   display: grid
@@ -38,9 +38,6 @@
   &:hover
     text-decoration: none
     border-bottom: none
-
-//.learn-more:hover
-//  border-bottom: 1px solid $main-color-blue
 
 .jumbotron-service-logo-icons
   width: 100%
@@ -88,49 +85,39 @@
   top: 320px
   right: 0
 
-@media (min-width: $tablet_regular_screen) AND (max-width: $desktop_regular_screen_max)
+@media (min-width: $tablet_regular_screen) AND (max-width: $desktop_small_screen_max)
   .jumbotron-service
     height: 50px
     width: 50px
     img
       width: 60%
       height: 60%
-
   .service-big
     height: 70px
     width: 70px
     img
       width: 50%
       height: 50%
-
   .jumbotron
     gap: 30px
     top: 80px
-
-
   .google
     top: 0
     left: 0px
-
   .google-ads
     top: 220px
     left: 95px
-
   .atlassian
     top: 0
     left: 100px
-
   .asana
     top: 0
     right: 0
-
   .paypal
     top: 110px
-
   .weave
     top: 130px
     right: 100px
-
   .calendar
     top: 230px
     right: 0
@@ -226,6 +213,8 @@
 
 @media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen_max)
   .jumbotron
+    margin-top: 40px
+  .jumbotron-content
     gap: 30px
     grid-template-columns: 1fr
     grid-template-rows: min-content min-content
@@ -246,9 +235,19 @@
     display: grid
     grid-template-columns: 1fr
     position: relative
+    height: 30px
+    width: 30px
     img
       grid-column: 1 / span 1
       align-self: center
       justify-self: center
       visibility: visible
       opacity: 1
+      width: 60%
+      height: 60%
+  .service-big
+    height: 70px
+    width: 70px
+    img
+      width: 50%
+      height: 50%

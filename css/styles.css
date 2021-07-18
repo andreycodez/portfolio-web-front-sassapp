@@ -545,20 +545,11 @@ q {
         align-self: center; }
 
   .header-top-menu {
-    grid-column: 2/span 1;
-    justify-self: end;
-    align-self: center;
     display: none; }
 
-  .header-top-menu-list {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: min-content; }
-
   .header-top-menu-buy-button {
-    align-self: center;
-    justify-self: end; } }
-.jumbotron {
+    display: none; } }
+.jumbotron-content {
   grid-column: 2/span 1;
   grid-row: 3/span 1;
   display: grid;
@@ -645,7 +636,7 @@ q {
   top: 320px;
   right: 0; }
 
-@media (min-width: 720px) and (max-width: 1199px) {
+@media (min-width: 720px) and (max-width: 1023px) {
   .jumbotron-service {
     height: 50px;
     width: 50px; }
@@ -776,6 +767,9 @@ q {
       transform: translateY(-50px); } } }
 @media (min-width: 0px) and (max-width: 719px) {
   .jumbotron {
+    margin-top: 40px; }
+
+  .jumbotron-content {
     gap: 30px;
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content;
@@ -794,13 +788,24 @@ q {
   .jumbotron-service {
     display: grid;
     grid-template-columns: 1fr;
-    position: relative; }
+    position: relative;
+    height: 30px;
+    width: 30px; }
     .jumbotron-service img {
       grid-column: 1/span 1;
       align-self: center;
       justify-self: center;
       visibility: visible;
-      opacity: 1; } }
+      opacity: 1;
+      width: 60%;
+      height: 60%; }
+
+  .service-big {
+    height: 70px;
+    width: 70px; }
+    .service-big img {
+      width: 50%;
+      height: 50%; } }
 .key-benefits-container {
   margin-top: 150px; }
 

@@ -80,6 +80,7 @@
     100%
       transform: translateY(100px)
 
+
 @media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen_max)
   .header
     grid-column: 2 / span 1
@@ -99,16 +100,7 @@
         align-self: center
 
   .header-top-menu
-    grid-column: 2 / span 1
-    justify-self: end
-    align-self: center
     display: none
 
-  .header-top-menu-list
-    display: grid
-    grid-auto-flow: column
-    grid-auto-columns: min-content
-
   .header-top-menu-buy-button
-    align-self: center
-    justify-self: end
+    display: none
