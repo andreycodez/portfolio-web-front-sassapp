@@ -49,7 +49,11 @@
     grid-column: 1 / -1
     width: 100%
 
-@media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen_max)
+@media (min-width: $tablet_regular_screen) AND (max-width: $desktop_regular_screen_max)
+  .why-front-bullets-list
+    grid-template-columns: repeat(4, 1fr)
+
+@media (max-width: $tablet_regular_screen_max)
   .why-front-bullets-list
     grid-auto-flow: row
     gap: 30px
@@ -70,6 +74,3 @@
       grid-column: 2 / span 1
       justify-self: start
 
-@media (min-width: $tablet_regular_screen) AND (max-width: $desktop_regular_screen_max)
-  .why-front-bullets-list
-    grid-template-columns: repeat(4, 1fr)

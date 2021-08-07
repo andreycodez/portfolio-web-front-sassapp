@@ -33,10 +33,14 @@
       line-height: 24px
       margin-bottom: 20px
   .main-plan-content-action
-    .specialtext
-      font-size: 12px
-    a
-      margin-top: 40px
+    .actionHolder
+      display: flex
+      flex-direction: column
+      .specialtext
+        font-size: 12px
+      a
+        margin-top: 40px
+        margin-bottom: 5px
 
 @media (min-width: $desktop_small_screen)
   .pricing-info
@@ -70,7 +74,7 @@
     display: flex
     align-items: center
     .main-plan-content-info
-      max-width: calc(50% - 20px)
+      width: calc(50% - 20px)
     .main-plan-content-action
       width: calc(50%)
       display: flex
@@ -81,7 +85,7 @@
         display: flex
         flex-direction: column
         a
-          margin-bottom: 10px
+          margin-bottom: 5px
 
   .main-plan
     grid-column: 1 / span 2
@@ -93,6 +97,14 @@
 
   .main-plan
     grid-column: 1 / span 1
+    .main-plan-content
+      flex-direction: column
+      .main-plan-content-info
+        width: 100%
+      .main-plan-content-action
+        width: 100%
+        justify-content: start
+
 
   .pricing-info
     padding: 0 40px
