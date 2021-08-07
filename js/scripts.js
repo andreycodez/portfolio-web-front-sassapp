@@ -1,58 +1,80 @@
-$(window).scroll(function() {
-    let viewPortWidth = $(window).width();
-    let scroll = $(window).scrollTop();
-    if (viewPortWidth >= 1024) {
-        if (scroll >= 800) {
-            $('#img-movable').addClass("appear-on-scroll");
+window.onscroll = () => {
+    const stickyHeader = document.getElementById('sticky-header');
+    const backToTopButton = document.getElementById('backToTopButton');
+    const imageMovable = document.getElementById('img-movable');
+    const pricingInfo = document.querySelectorAll('.pricing-info');
+    const headerExtender = document.getElementById('header-extender-on-roll-out');
+    const topLinkHome = document.getElementById('top-link-home');
+    const topLinkFeatures = document.getElementById('top-link-features');
+    const topLinkLearn = document.getElementById('top-link-learn');
+    const topLinkPricing = document.getElementById('top-link-pricing');
+    const topLinkHireUs = document.getElementById('top-link-hire-us');
+    //console.log(pricingInfo);
+    let windowWidth = window.innerWidth;
+    let topOffset;
+
+    topOffset = window.pageYOffset || document.body.scrollTop;
+    //console.log(windowWidth, topOffset);
+
+    if (windowWidth >= 1024) {
+        if (topOffset >= 800) {
+            imageMovable.classList.add("appear-on-scroll");
         }
-        if (scroll >= 2900) {
-            $('.pricing-info').addClass("animated-pricing");
-        }
-    }
-    if (scroll >= 600) {
-        $('#sticky-header').addClass("main-grid-sticky-header");
-        $('#header-extender-on-roll-out').addClass("header-extender");
-        $('#sticky-header').removeClass("header-close");
-        $('#backToTopButton').removeClass('invisible');
-        $('#backToTopButton').removeClass('back-to-top-button-close');
-        $('#backToTopButton').addClass('back-to-top-button-open');
-    } else if ((scroll < 600) && (scroll >= 200)) {
-        $("#sticky-header").addClass("header-close");
-    } else {
-        $("#sticky-header").removeClass("main-grid-sticky-header");
-        $("#header-extender-on-roll-out").removeClass("header-extender");
-        $("#sticky-header").removeClass("header-close");
-        $('#backToTopButton').removeClass('back-to-top-button-open');
-        if (!($('#backToTopButton').hasClass('invisible'))) {
-            $('#backToTopButton').addClass('back-to-top-button-close');
+        if (topOffset >= 2900 && !pricingInfo[0].classList.contains('animated-pricing')) {
+            pricingInfo.forEach(item => {
+                item.classList.add("animated-pricing");
+            })
         }
     }
 
-    if (viewPortWidth >= 720) {
-        if (scroll >= 600) {
-            $("#top-link-home").removeClass("active");
-        } else {
-            $("#top-link-home").addClass("active");
-        }
-        if ((scroll > 599) && (scroll <= 1700)) {
-            $("#top-link-features").addClass("active");
-        } else {
-            $("#top-link-features").removeClass("active");
-        }
-        if ((scroll > 1699) && (scroll <= 3370)) {
-            $("#top-link-learn").addClass("active");
-        } else {
-            $("#top-link-learn").removeClass("active");
-        }
-        if ((scroll > 3369) && (scroll <= 4020)) {
-            $("#top-link-pricing").addClass("active");
-        } else {
-            $("#top-link-pricing").removeClass("active");
-        }
-        if (scroll > 4020) {
-            $("#top-link-hire-us").addClass("active");
-        } else {
-            $("#top-link-hire-us").removeClass("active");
+    if (topOffset >= 600) {
+        stickyHeader.classList.add("main-grid-sticky-header");
+        headerExtender.classList.add("header-extender");
+        stickyHeader.classList.remove("header-close");
+        backToTopButton.classList.remove('invisible');
+        backToTopButton.classList.remove('back-to-top-button-close');
+        backToTopButton.classList.add('back-to-top-button-open');
+    } else if ((topOffset < 600) && (scroll >= 200)) {
+        stickyHeader.classList.add("header-close");
+    } else {
+        stickyHeader.classList.remove("main-grid-sticky-header");
+        headerExtender.classList.remove("header-extender");
+        stickyHeader.classList.remove("header-close");
+        backToTopButton.classList.remove('back-to-top-button-open');
+        if (!(backToTopButton.classList.contains('invisible'))) {
+            backToTopButton.classList.add('back-to-top-button-close');
         }
     }
-});
+
+    if (windowWidth >= 720) {
+        if (topOffset >= 600) {
+            topLinkHome.classList.remove("active");
+        } else {
+            topLinkHome.classList.add("active");
+        }
+
+        if ((topOffset > 599) && (topOffset <= 1700)) {
+            topLinkFeatures.classList.add("active");
+        } else {
+            topLinkFeatures.classList.remove("active");
+        }
+
+        if ((topOffset > 1699) && (topOffset <= 3370)) {
+            topLinkLearn.classList.add("active");
+        } else {
+            topLinkLearn.classList.remove("active");
+        }
+
+        if ((topOffset > 3369) && (topOffset <= 4020)) {
+            topLinkPricing.classList.add("active");
+        } else {
+            topLinkPricing.classList.remove("active");
+        }
+
+        if (topOffset > 4020) {
+            topLinkHireUs.classList.add("active");
+        } else {
+            topLinkHireUs.classList.remove("active");
+        }
+    }
+}

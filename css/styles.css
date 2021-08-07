@@ -1,9 +1,9 @@
 @charset "UTF-8";
 :root {
-  --main-color-blue: $main-color-blue;
-  --text-color-regular: $text-color-regular;
-  --text-color-white: $text-color-white;
-  --text-color-black: $text-color-black; }
+  --main-color-blue: #2576FF;
+  --text-color-regular: #677788;
+  --text-color-white: #FFFFFF;
+  --text-color-black: #000000; }
 
 :root {
   font-size: 16px;
@@ -147,15 +147,18 @@ body {
 .pt-40 {
   padding-top: 40px; }
 
+* {
+  box-sizing: border-box; }
+
 .main-grid {
   display: grid;
-  grid-template-columns: minmax(30px, 1fr) minmax(964px, 1fr) minmax(30px, 1fr);
+  grid-template-columns: minmax(30px, 1fr) minmax(944px, 1fr) minmax(30px, 1fr);
   grid-auto-flow: row;
   align-items: center; }
 
 .main-grid-wide {
   display: grid;
-  grid-template-columns: minmax(10px, 1fr) minmax(1004px, 1fr) minmax(10px, 1fr);
+  grid-template-columns: minmax(10px, 1fr) minmax(988px, 1fr) minmax(10px, 1fr);
   grid-auto-flow: row; }
 
 .content-grid {
@@ -166,10 +169,10 @@ body {
 
 @media (min-width: 1200px) {
   .main-grid {
-    grid-template-columns: minmax(60px, 1fr) minmax(1080px, 1fr) minmax(60px, 1fr); }
+    grid-template-columns: minmax(60px, 1fr) minmax(1060px, 1fr) minmax(60px, 1fr); }
 
   .main-grid-wide {
-    grid-template-columns: minmax(10px, 1fr) minmax(1180px, 1fr) minmax(10px, 1fr); } }
+    grid-template-columns: minmax(10px, 1fr) minmax(1160px, 1fr) minmax(10px, 1fr); } }
 @media (min-width: 720px) and (max-width: 1023px) {
   .main-grid {
     grid-template-columns: minmax(40px, 1fr) minmax(640px, 1fr) minmax(40px, 1fr); }
@@ -405,6 +408,10 @@ q {
 .logo {
   width: 100px; }
 
+@media (max-width: 719px) {
+  .grid-item-left-centered {
+    align-self: center;
+    justify-self: center; } }
 .top-section {
   width: 100%;
   background-image: url("../images/backgrounds/background-top.svg");
@@ -514,18 +521,19 @@ q {
   -webkit-animation-fill-mode: unset;
   animation-fill-mode: unset;
   transform: translateY(-100px);
-  transition: transform 0.2s ease-in-out; }
+  transition: transform 0.8s ease-in-out; }
 
 .header-extender {
   min-height: 44px; }
 
-@media (min-width: 1024px) {
+@media (min-width: 0px) {
   @keyframes sticky-header-appear {
     0% {
       top: -100px; }
-    1%;
+    1% {
+      top: -100px; }
     100% {
-      transform: translateY(100px); } } }
+      top: 0; } } }
 @media (min-width: 0px) and (max-width: 719px) {
   .header {
     grid-column: 2/span 1;
@@ -1067,20 +1075,20 @@ q {
 
 .main-plan-content {
   align-self: center; }
-  .main-plan-content .price {
+  .main-plan-content .main-plan-content-info .price {
     padding-bottom: 30px;
     border-bottom: 1px solid #677788; }
-    .main-plan-content .price .price-sum {
+    .main-plan-content .main-plan-content-info .price .price-sum {
       font-size: 50px; }
-    .main-plan-content .price .price-sub {
+    .main-plan-content .main-plan-content-info .price .price-sub {
       color: #677788; }
-  .main-plan-content .subtext {
+  .main-plan-content .main-plan-content-info .subtext {
     margin-top: 30px;
     line-height: 24px;
     margin-bottom: 20px; }
-  .main-plan-content .specialtext {
+  .main-plan-content .main-plan-content-action .specialtext {
     font-size: 12px; }
-  .main-plan-content a {
+  .main-plan-content .main-plan-content-action a {
     margin-top: 40px; }
 
 @media (min-width: 1024px) {
@@ -1106,11 +1114,40 @@ q {
       visibility: visible;
       opacity: 1;
       transform: translateY(-400px); } } }
-@media (min-width: 0px) and (max-width: 719px) {
+@media (max-width: 1023px) {
   .pricing-plans-container {
-    display: grid;
-    grid-auto-rows: auto;
-    grid-template-columns: 1fr; } }
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: auto; }
+
+  .main-plan-content {
+    display: flex;
+    align-items: center; }
+    .main-plan-content .main-plan-content-info {
+      max-width: calc(50% - 20px); }
+    .main-plan-content .main-plan-content-action {
+      width: calc(50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+      .main-plan-content .main-plan-content-action .actionHolder {
+        display: flex;
+        flex-direction: column; }
+        .main-plan-content .main-plan-content-action .actionHolder a {
+          margin-bottom: 10px; }
+
+  .main-plan {
+    grid-column: 1/span 2; } }
+@media (max-width: 719px) {
+  .pricing-plans-container {
+    grid-template-columns: 1fr;
+    grid-row: auto; }
+
+  .main-plan {
+    grid-column: 1/span 1; }
+
+  .pricing-info {
+    padding: 0 40px; } }
 .section-with-background {
   background-color: #20335B; }
 
@@ -1181,7 +1218,9 @@ q {
   .form-container > form .privacy-policy {
     grid-column: span 2;
     display: grid;
-    grid-template-columns: 20px 1fr; }
+    grid-template-columns: 30px 1fr; }
+    .form-container > form .privacy-policy label {
+      display: block; }
     .form-container > form .privacy-policy a {
       text-decoration: none;
       color: #677788;
@@ -1210,31 +1249,73 @@ q {
   .form-container > form .checkbox-field {
     outline: 1px solid #E6E8F2; }
 
-@media (min-width: 0px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .hire-us-form {
     grid-auto-flow: row;
     gap: 50px;
-    padding: 50px 0 30px 0; }
+    padding: 50px 0 30px 0;
+    justify-items: center; }
+    .hire-us-form .description {
+      display: flex;
+      flex-direction: row;
+      gap: 60px; }
+      .hire-us-form .description .hire-us-description-left {
+        display: flex;
+        flex-direction: column; }
+      .hire-us-form .description .hire-us-description-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: start; }
+        .hire-us-form .description .hire-us-description-right .employee-info {
+          margin-top: 0; }
 
   .form {
-    margin-top: 20px; }
-
-  .form-container > form {
-    grid-template-columns: 1fr;
+    width: 100%;
+    margin-top: 20px;
+    grid-template-columns: 1fr 1fr;
     grid-auto-flow: row;
     gap: 20px; }
-    .form-container > form input.input-field {
+    .form input.input-field {
       grid-column: span 1; }
-    .form-container > form textarea {
-      grid-column: span 1; }
-    .form-container > form .privacy-policy {
-      grid-column: span 1;
+    .form textarea {
+      grid-column: span 2; }
+    .form .privacy-policy {
+      grid-column: span 2;
       display: grid;
-      grid-template-columns: 20px 1fr; }
-    .form-container > form .submit-button {
+      grid-template-columns: 30px 1fr; }
+    .form .submit-button {
       grid-column: span 1; }
-    .form-container > form .select-field {
+    .form .select-field {
       grid-column: span 1; } }
+@media (max-width: 719px) {
+  .hire-us-form {
+    justify-items: center; }
+    .hire-us-form .description {
+      display: flex;
+      flex-direction: column;
+      text-align: center; }
+      .hire-us-form .description .hire-us-description-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+      .hire-us-form .description .hire-us-description-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+    .hire-us-form form {
+      grid-template-columns: 1fr; }
+      .hire-us-form form input.input-field {
+        grid-column: span 1; }
+      .hire-us-form form textarea {
+        grid-column: span 1; }
+      .hire-us-form form .privacy-policy {
+        grid-column: span 1;
+        display: grid;
+        grid-template-columns: 30px 1fr; }
+      .hire-us-form form .submit-button {
+        grid-column: span 1; }
+      .hire-us-form form .select-field {
+        grid-column: span 1; } }
 .footer-container {
   display: grid;
   grid-auto-flow: column;

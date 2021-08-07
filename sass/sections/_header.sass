@@ -65,20 +65,21 @@
   -webkit-animation-fill-mode: unset
   animation-fill-mode: unset
   transform: translateY(-100px)
-  transition: transform .2s ease-in-out
+  transition: transform .8s ease-in-out
 
 .header-extender
   min-height: 44px
 
 
 
-@media (min-width: $desktop_small_screen)
+@media (min-width: 0px)
   @keyframes sticky-header-appear
     0%
       top: -100px
     1%
+      top: -100px
     100%
-      transform: translateY(100px)
+      top: 0
 
 
 @media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen_max)
