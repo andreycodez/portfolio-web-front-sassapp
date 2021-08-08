@@ -1,3 +1,5 @@
+let isMenuOn = false;
+
 window.onscroll = () => {
     const stickyHeader = document.getElementById('sticky-header');
     const backToTopButton = document.getElementById('backToTopButton');
@@ -9,12 +11,8 @@ window.onscroll = () => {
     const topLinkLearn = document.getElementById('top-link-learn');
     const topLinkPricing = document.getElementById('top-link-pricing');
     const topLinkHireUs = document.getElementById('top-link-hire-us');
-    //console.log(pricingInfo);
     let windowWidth = window.innerWidth;
-    let topOffset;
-
-    topOffset = window.pageYOffset || document.body.scrollTop;
-    //console.log(windowWidth, topOffset);
+    let topOffset = window.pageYOffset || document.body.scrollTop;
 
     if (windowWidth >= 1024) {
         if (topOffset >= 800) {
@@ -27,7 +25,7 @@ window.onscroll = () => {
         }
     }
 
-    if (topOffset >= 600) {
+    if (topOffset >= 600 && !isMenuOn) {
         stickyHeader.classList.add("main-grid-sticky-header");
         headerExtender.classList.add("header-extender");
         stickyHeader.classList.remove("header-close");
@@ -78,3 +76,21 @@ window.onscroll = () => {
         }
     }
 }
+
+const trigram = document.getElementById('trigram');
+
+trigram.addEventListener('click', () => {
+    const topMenu = document.getElementById('mobileTopMenu');
+    const header = document.getElementById('sticky-header');
+    if (topMenu.style.display !== 'flex') {
+        topMenu.style.display = 'flex';
+        trigram.innerHTML = '<i class="fas fa-times"></i>';
+        header.classList.add('main-grid-sticky-header-trigram');
+        isMenuOn = true;
+    } else {
+        topMenu.style.display = 'none';
+        trigram.innerHTML = '<i class="fas fa-bars"></i>';
+        header.classList.remove('main-grid-sticky-header-trigram');
+        isMenuOn = false;
+    }
+})

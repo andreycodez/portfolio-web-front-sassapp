@@ -5,6 +5,7 @@
   grid-template-columns: min-content 1fr min-content
   align-items: center
   gap: 30px
+  height: 80px
 
 .header-logo-section
   grid-column: 1 / span 1
@@ -15,15 +16,30 @@
       grid-column: 1 / span 1
       align-self: center
 
-.header-top-menu
-  grid-column: 2 / span 1
-  justify-self: end
-  align-self: center
+.header-top-menu-trigram
+  display: none
+  color: #2576FF
+  position: relative
+  top: 2px
+  margin-left: auto
+  .trigram-tap-holder
+    height: 40px
+    width: 40px
+    display: flex
+    align-items: center
+    justify-content: center
 
-.header-top-menu-list
-  display: grid
-  grid-auto-flow: column
-  grid-auto-columns: min-content
+.header-top-menu-holder
+  display: flex
+  gap: 30px
+  justify-self: end
+  .header-top-menu
+    grid-column: 2 / span 1
+    align-self: center
+  .header-top-menu-list
+    display: grid
+    grid-auto-flow: column
+    grid-auto-columns: min-content
 
 .header-top-menu-buy-button
   align-self: center
@@ -82,14 +98,25 @@
       top: 0
 
 
-@media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen_max)
+@media (max-width: $tablet_regular_screen_max)
   .header
-    grid-column: 2 / span 1
-    display: grid
-    grid-auto-flow: row
-    grid-template-columns: 1fr
+    display: flex
     align-items: center
     gap: 30px
+    width: 100%
+    padding: 0 10px
+
+  #sticky-header
+    z-index: 200
+
+  .main-grid-sticky-header-trigram
+    background-color: #FFFFFF
+    height: 80px
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    box-shadow: 0 0 20px rgba(0,0,0,0.1)
 
   .header-logo-section
     grid-column: 1 / span 1
@@ -99,9 +126,27 @@
       img
         grid-column: 1 / span 1
         align-self: center
-
-  .header-top-menu
+  .header-top-menu-trigram
+    display: block
+  .header-top-menu-holder
     display: none
-
-  .header-top-menu-buy-button
-    display: none
+    position: fixed
+    top: 80px
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: #677788
+    z-index: 10
+    flex-direction: column
+    .header-top-menu
+      padding-top: 60px
+      & > nav > ul
+        display: flex
+        flex-direction: column
+        gap: 20px
+        align-items: center
+        li
+          margin-left: 0
+          a
+            color: #FFFFFF
+            font-size: 22px

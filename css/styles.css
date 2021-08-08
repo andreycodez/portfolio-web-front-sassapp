@@ -462,7 +462,8 @@ q {
   grid-auto-flow: column;
   grid-template-columns: min-content 1fr min-content;
   align-items: center;
-  gap: 30px; }
+  gap: 30px;
+  height: 80px; }
 
 .header-logo-section {
   grid-column: 1/span 1; }
@@ -473,15 +474,30 @@ q {
       grid-column: 1/span 1;
       align-self: center; }
 
-.header-top-menu {
-  grid-column: 2/span 1;
-  justify-self: end;
-  align-self: center; }
+.header-top-menu-trigram {
+  display: none;
+  color: #2576FF;
+  position: relative;
+  top: 2px;
+  margin-left: auto; }
+  .header-top-menu-trigram .trigram-tap-holder {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
-.header-top-menu-list {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: min-content; }
+.header-top-menu-holder {
+  display: flex;
+  gap: 30px;
+  justify-self: end; }
+  .header-top-menu-holder .header-top-menu {
+    grid-column: 2/span 1;
+    align-self: center; }
+  .header-top-menu-holder .header-top-menu-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content; }
 
 .header-top-menu-buy-button {
   align-self: center;
@@ -535,14 +551,25 @@ q {
       top: -100px; }
     100% {
       top: 0; } } }
-@media (min-width: 0px) and (max-width: 719px) {
+@media (max-width: 719px) {
   .header {
-    grid-column: 2/span 1;
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: 1fr;
+    display: flex;
     align-items: center;
-    gap: 30px; }
+    gap: 30px;
+    width: 100%;
+    padding: 0 10px; }
+
+  #sticky-header {
+    z-index: 200; }
+
+  .main-grid-sticky-header-trigram {
+    background-color: #FFFFFF;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
 
   .header-logo-section {
     grid-column: 1/span 1; }
@@ -553,14 +580,33 @@ q {
         grid-column: 1/span 1;
         align-self: center; }
 
-  .header-top-menu {
-    display: none; }
+  .header-top-menu-trigram {
+    display: block; }
 
-  .header-top-menu-buy-button {
-    display: none; } }
+  .header-top-menu-holder {
+    display: none;
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #677788;
+    z-index: 10;
+    flex-direction: column; }
+    .header-top-menu-holder .header-top-menu {
+      padding-top: 60px; }
+      .header-top-menu-holder .header-top-menu > nav > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center; }
+        .header-top-menu-holder .header-top-menu > nav > ul li {
+          margin-left: 0; }
+          .header-top-menu-holder .header-top-menu > nav > ul li a {
+            color: #FFFFFF;
+            font-size: 22px; } }
 .jumbotron-content {
   grid-column: 2/span 1;
-  grid-row: 3/span 1;
   display: grid;
   gap: 130px;
   grid-template-columns: 1fr 1fr;
@@ -645,51 +691,6 @@ q {
   top: 320px;
   right: 0; }
 
-@media (min-width: 720px) and (max-width: 1023px) {
-  .jumbotron-service {
-    height: 50px;
-    width: 50px; }
-    .jumbotron-service img {
-      width: 60%;
-      height: 60%; }
-
-  .service-big {
-    height: 70px;
-    width: 70px; }
-    .service-big img {
-      width: 50%;
-      height: 50%; }
-
-  .jumbotron {
-    gap: 30px;
-    top: 80px; }
-
-  .google {
-    top: 0;
-    left: 0px; }
-
-  .google-ads {
-    top: 220px;
-    left: 95px; }
-
-  .atlassian {
-    top: 0;
-    left: 100px; }
-
-  .asana {
-    top: 0;
-    right: 0; }
-
-  .paypal {
-    top: 110px; }
-
-  .weave {
-    top: 130px;
-    right: 100px; }
-
-  .calendar {
-    top: 230px;
-    right: 0; } }
 @media (min-width: 1024px) {
   .service-big {
     height: 90px;
@@ -774,7 +775,67 @@ q {
       visibility: visible;
       opacity: 1;
       transform: translateY(-50px); } } }
-@media (min-width: 0px) and (max-width: 719px) {
+@media (max-width: 1023px) {
+  .jumbotron {
+    top: 0; }
+
+  .jumbotron-content {
+    display: flex;
+    flex-direction: column;
+    top: 40px;
+    gap: 50px; }
+    .jumbotron-content .jumbotron-headline {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .jumbotron-content .jumbotron-headline h1 {
+        width: 100%; }
+      .jumbotron-content .jumbotron-headline .subtext {
+        width: 100%; }
+
+  .jumbotron-service {
+    height: 50px;
+    width: 50px; }
+    .jumbotron-service img {
+      width: 60%;
+      height: 60%; }
+
+  .service-big {
+    height: 70px;
+    width: 70px; }
+    .service-big img {
+      width: 50%;
+      height: 50%; }
+
+  .google {
+    top: 0;
+    left: 0px; }
+
+  .google-ads {
+    top: 130px;
+    left: 200px; }
+
+  .atlassian {
+    top: 30px;
+    left: 100px; }
+
+  .asana {
+    top: 0;
+    right: 0; }
+
+  .paypal {
+    top: 0;
+    left: 300px; }
+
+  .weave {
+    top: 110px;
+    right: 190px; }
+
+  .calendar {
+    top: 120px;
+    right: 30px; } }
+@media (max-width: 719px) {
   .jumbotron {
     margin-top: 40px; }
 

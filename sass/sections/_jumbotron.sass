@@ -1,6 +1,5 @@
 .jumbotron-content
   grid-column: 2 / span 1
-  grid-row: 3 / span 1
   display: grid
   gap: 130px
   grid-template-columns: 1fr 1fr
@@ -84,44 +83,6 @@
 .calendar
   top: 320px
   right: 0
-
-@media (min-width: $tablet_regular_screen) AND (max-width: $desktop_small_screen_max)
-  .jumbotron-service
-    height: 50px
-    width: 50px
-    img
-      width: 60%
-      height: 60%
-  .service-big
-    height: 70px
-    width: 70px
-    img
-      width: 50%
-      height: 50%
-  .jumbotron
-    gap: 30px
-    top: 80px
-  .google
-    top: 0
-    left: 0px
-  .google-ads
-    top: 220px
-    left: 95px
-  .atlassian
-    top: 0
-    left: 100px
-  .asana
-    top: 0
-    right: 0
-  .paypal
-    top: 110px
-  .weave
-    top: 130px
-    right: 100px
-  .calendar
-    top: 230px
-    right: 0
-
 
 @media (min-width: $desktop_small_screen)
   .service-big
@@ -211,7 +172,61 @@
       transform: translateY(-50px)
 
 
-@media (min-width: $zero_screen) AND (max-width: $tablet_regular_screen_max)
+
+@media (max-width: $desktop_small_screen_max)
+  .jumbotron
+    top: 0
+  .jumbotron-content
+    display: flex
+    flex-direction: column
+    top: 40px
+    gap: 50px
+    .jumbotron-headline
+      text-align: center
+      display: flex
+      flex-direction: column
+      align-items: center
+      h1
+        width: 100%
+      .subtext
+        width: 100%
+
+  .jumbotron-service
+    height: 50px
+    width: 50px
+    img
+      width: 60%
+      height: 60%
+  .service-big
+    height: 70px
+    width: 70px
+    img
+      width: 50%
+      height: 50%
+  .google
+    top: 0
+    left: 0px
+  .google-ads
+    top: 130px
+    left: 200px
+  .atlassian
+    top: 30px
+    left: 100px
+  .asana
+    top: 0
+    right: 0
+  .paypal
+    top: 0
+    left: 300px
+  .weave
+    top: 110px
+    right: 190px
+  .calendar
+    top: 120px
+    right: 30px
+
+
+@media (max-width: $tablet_regular_screen_max)
   .jumbotron
     margin-top: 40px
   .jumbotron-content
