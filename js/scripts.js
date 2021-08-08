@@ -1,6 +1,6 @@
 let isMenuOn = false;
 
-alert('screen width=' + window.innerWidth);
+alert('Browser ww = ' + window.innerWidth);
 
 window.onscroll = () => {
     const stickyHeader = document.getElementById('sticky-header');
@@ -70,20 +70,36 @@ window.onscroll = () => {
         } else {
             topLinkPricing.classList.remove("active");
         }
-
         if (topOffset > 4020) {
             topLinkHireUs.classList.add("active");
         } else {
             topLinkHireUs.classList.remove("active");
         }
+    } else if (windowWidth <= 719) {
+        addTopMenuLinksAction()
     }
+}
+
+const topMenu = document.getElementById('mobileTopMenu');
+const links = document.querySelectorAll('[data-link]');
+const header = document.getElementById('sticky-header');
+
+function addTopMenuLinksAction() {
+    console.log(links)
+    links.forEach( item => {
+        item.addEventListener('click', () => {
+            topMenu.style.display = 'none';
+            console.log('found')
+            trigram.innerHTML = '<i class="fas fa-bars"></i>';
+            header.classList.remove('main-grid-sticky-header-trigram');
+            isMenuOn = false;
+        })
+    })
 }
 
 const trigram = document.getElementById('trigram');
 
 trigram.addEventListener('click', () => {
-    const topMenu = document.getElementById('mobileTopMenu');
-    const header = document.getElementById('sticky-header');
     if (topMenu.style.display !== 'flex') {
         topMenu.style.display = 'flex';
         trigram.innerHTML = '<i class="fas fa-times"></i>';
