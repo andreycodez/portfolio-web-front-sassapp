@@ -1,5 +1,7 @@
 let isMenuOn = false;
 
+alert('screen width=' + window.innerWidth);
+
 window.onscroll = () => {
     const stickyHeader = document.getElementById('sticky-header');
     const backToTopButton = document.getElementById('backToTopButton');
