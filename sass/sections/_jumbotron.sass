@@ -7,29 +7,67 @@
   height: 480px
   position: relative
   top: 140px
-
-.jumbotron-headline > h1
-  width: 300px
-
-.jumbotron-headline > .subtext
-  margin-top: 10px
-  line-height: 24px
-  width: 250px
-  color: $text-color-regular
-
-.jumbotron-headline > .actions
-  display: grid
-  grid-template-columns: min-content min-content
-  align-items: center
-  gap: 30px
-  margin-top: 30px
-  color: $text-color-regular
-  a
-    white-space: nowrap
-    font-size: 14px
-    font-weight: bold
-    text-decoration: none
-    color: $main-color-blue
+  .jumbotron-headline
+    h1
+      width: 300px
+    .subtext
+      margin-top: 10px
+      line-height: 24px
+      width: 250px
+      color: $text-color-regular
+    .actions
+      display: grid
+      grid-template-columns: min-content min-content
+      align-items: center
+      gap: 30px
+      margin-top: 30px
+      color: $text-color-regular
+      a
+        white-space: nowrap
+        font-size: 14px
+        font-weight: bold
+        text-decoration: none
+        color: $main-color-blue
+  .jumbotron-service-logo-icons
+    width: 100%
+    height: 100%
+    position: relative
+    .jumbotron-service
+      position: absolute
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 66px
+      width: 66px
+      background: $text-color-white
+      border-radius: 50%
+      box-shadow: 0 3px 10px 2px rgba(226, 226, 226, 1)
+    .google
+      top: 20px
+      left: 20px
+    .google-ads
+      top: 300px
+      left: 95px
+    .atlassian
+      top: 20px
+      left: 140px
+    .asana
+      top: 25px
+      right: 0
+    .paypal
+      top: 180px
+    .weave
+      top: 180px
+      right: 140px
+    .calendar
+      top: 320px
+      right: 0
+    .service-big
+      height: 90px
+      width: 90px
+      img
+        width: 50%
+        height: 50%
 
 .no-text-decoration
   text-decoration: none
@@ -38,92 +76,43 @@
     text-decoration: none
     border-bottom: none
 
-.jumbotron-service-logo-icons
-  width: 100%
-  height: 100%
-  position: relative
-
-.jumbotron-service
-  display: grid
-  grid-template-columns: 1fr
-  position: absolute
-  height: 66px
-  width: 66px
-  background: $text-color-white
-  border-radius: 50%
-  box-shadow: 0 3px 10px 2px rgba(226, 226, 226, 1)
-  img
-    grid-column: 1 / span 1
-    align-self: center
-    justify-self: center
-
-.google
-  top: 20px
-  left: 20px
-
-.google-ads
-  top: 300px
-  left: 95px
-
-.atlassian
-  top: 20px
-  left: 140px
-
-.asana
-  top: 25px
-  right: 0
-
-.paypal
-  top: 180px
-
-.weave
-  top: 180px
-  right: 140px
-
-.calendar
-  top: 320px
-  right: 0
 
 @media (min-width: $desktop_small_screen)
-  .service-big
-    height: 90px
-    width: 90px
-    img
-      width: 50%
-      height: 50%
-  .jumbotron-service
-    animation-name: image-background-appear
-    animation-delay: .2s
-    animation-duration: 1s
-    animation-fill-mode: forwards
-    -webkit-animation-name: image-background-appear
-    -webkit-animation-delay: .2s
-    -webkit-animation-duration: 1s
-    -webkit-animation-fill-mode: forwards
-    visibility: hidden
-    opacity: 0
-    transform: translateY(50px)
-    img
-      width: 60%
-      height: 60%
-      visibility: hidden
-      opacity: 0
-      animation-name: image-appear
-      animation-fill-mode: forwards
-      animation-delay: .2s
-      animation-duration: 1s
-      -webkit-animation-name: image-appear
-      -webkit-animation-fill-mode: forwards
-      -webkit-animation-delay: .2s
-      -webkit-animation-duration: 1s
-  .jumbotron-service-logo-icons > .service-big
-    animation-duration: 1s
-    -webkit-animation-duration: 1s
-    animation-delay: .4s
-    img
-      animation-duration: 1s
-      -webkit-animation-duration: 1s
-
+  .jumbotron
+    .jumbotron-content
+      .jumbotron-service-logo-icons
+        .jumbotron-service
+          animation-name: image-background-appear
+          animation-delay: .2s
+          animation-duration: 1s
+          animation-fill-mode: forwards
+          -webkit-animation-name: image-background-appear
+          -webkit-animation-delay: .2s
+          -webkit-animation-duration: 1s
+          -webkit-animation-fill-mode: forwards
+          visibility: hidden
+          opacity: 0
+          transform: translateY(50px)
+          img
+            width: 60%
+            height: 60%
+            visibility: hidden
+            opacity: 0
+            animation-name: image-appear
+            animation-fill-mode: forwards
+            animation-delay: .2s
+            animation-duration: 1s
+            -webkit-animation-name: image-appear
+            -webkit-animation-fill-mode: forwards
+            -webkit-animation-delay: .2s
+            -webkit-animation-duration: 1s
+          .service-big
+            animation-duration: 1s
+            -webkit-animation-duration: 1s
+            animation-delay: .8s
+            img
+              animation-duration: 1s
+              -webkit-animation-duration: 1s
 
   @keyframes image-appear
     0%
@@ -176,93 +165,67 @@
 @media (max-width: $desktop_small_screen_max)
   .jumbotron
     top: 0
-  .jumbotron-content
-    display: flex
-    flex-direction: column
-    top: 40px
-    gap: 50px
-    .jumbotron-headline
-      text-align: center
+    .jumbotron-content
       display: flex
       flex-direction: column
-      align-items: center
-      h1
-        width: 100%
-      .subtext
-        width: 100%
-
-  .jumbotron-service
-    height: 50px
-    width: 50px
-    img
-      width: 60%
-      height: 60%
-  .service-big
-    height: 70px
-    width: 70px
-    img
-      width: 50%
-      height: 50%
-  .google
-    top: 0
-    left: 0px
-  .google-ads
-    top: 130px
-    left: 200px
-  .atlassian
-    top: 30px
-    left: 100px
-  .asana
-    top: 0
-    right: 0
-  .paypal
-    top: 0
-    left: 300px
-  .weave
-    top: 110px
-    right: 190px
-  .calendar
-    top: 120px
-    right: 30px
+      top: 40px
+      gap: 50px
+      .jumbotron-headline
+        text-align: center
+        display: flex
+        flex-direction: column
+        align-items: center
+        h1
+          width: 100%
+        .subtext
+          width: 100%
+      .jumbotron-service-logo-icons
+        display: flex
+        align-items: center
+        justify-content: center
+        height: auto
+        gap: 25px
+        justify-self: center
+        .jumbotron-service
+          position: static
+          height: 50px
+          width: 50px
+          img
+            width: 60%
+            height: 60%
 
 
 @media (max-width: $tablet_regular_screen_max)
   .jumbotron
     margin-top: 40px
-  .jumbotron-content
-    gap: 30px
-    grid-template-columns: 1fr
-    grid-template-rows: min-content min-content
-    height: auto
-    position: static
-
-  .jumbotron-headline > .actions
-    display: grid
-    grid-template-columns: min-content min-content
-    align-items: center
-    gap: 30px
-
-  .jumbotron-headline > h1
-    //TODO Change to 100% when top section is set to normal width
-    width: 90vw
-
-  .jumbotron-service
-    display: grid
-    grid-template-columns: 1fr
-    position: relative
-    height: 30px
-    width: 30px
-    img
-      grid-column: 1 / span 1
-      align-self: center
-      justify-self: center
-      visibility: visible
-      opacity: 1
-      width: 60%
-      height: 60%
-  .service-big
-    height: 70px
-    width: 70px
-    img
-      width: 50%
-      height: 50%
+    .jumbotron-content
+      gap: 30px
+      grid-template-columns: 1fr
+      grid-template-rows: min-content min-content
+      position: static
+      .jumbotron-headline > .actions
+        display: grid
+        grid-template-columns: min-content min-content
+        align-items: center
+        gap: 30px
+      .jumbotron-service-logo-icons
+        gap: 15px
+        justify-self: center
+        .jumbotron-service
+          position: static
+          height: 30px
+          width: 30px
+          img
+            grid-column: 1 / span 1
+            align-self: center
+            justify-self: center
+            visibility: visible
+            opacity: 1
+            width: 60%
+            height: 60%
+        .service-big
+          height: 30px
+          width: 30px
+          img
+            width: 50%
+            height: 50%
