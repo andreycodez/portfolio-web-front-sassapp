@@ -1,6 +1,6 @@
 let isMenuOn = false;
 
-alert('Browser ww = ' + window.innerWidth);
+// alert('Browser ww = ' + window.innerWidth);
 
 window.onscroll = () => {
     const stickyHeader = document.getElementById('sticky-header');
@@ -112,3 +112,4 @@ trigram.addEventListener('click', () => {
         isMenuOn = false;
     }
 })
+

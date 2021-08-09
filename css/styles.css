@@ -912,7 +912,21 @@ q {
       visibility: visible;
       opacity: 1;
       transform: translateY(-574px); } } }
-@media (min-width: 0px) and (max-width: 719px) {
+@media (max-width: 1024px) {
+  .banner-one-container {
+    height: 480px; }
+
+  .banner-one-image > img {
+    height: 360px; } }
+@media (max-width: 1023px) {
+  .banner-one-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+  .banner-one-image > img {
+    height: 360px; } }
+@media (max-width: 719px) {
   .banner-one-image > img {
     width: 100%; }
 
@@ -927,12 +941,6 @@ q {
 
   .banner-one-image {
     grid-column: 1/span 1; } }
-@media (min-width: 720px) and (max-width: 1199px) {
-  .banner-one-container {
-    height: 480px; }
-
-  .banner-one-image > img {
-    height: 360px; } }
 .play-icon {
   padding-top: 1px;
   padding-left: 2px; }
@@ -1046,7 +1054,9 @@ q {
     grid-template-columns: 1fr;
     grid-auto-flow: row; }
     .hubspot-container .hubspot-image {
-      justify-self: center; } }
+      justify-self: center; }
+    .hubspot-container .hubspot-text {
+      text-align: center; } }
 @media (max-width: 719px) {
   .hubspot-image {
     width: 280px;
@@ -1258,6 +1268,8 @@ q {
     grid-column: span 2;
     display: grid;
     grid-template-columns: 30px 1fr; }
+    .form-container > form .privacy-policy #privacyPolicy {
+      margin-top: 5px; }
     .form-container > form .privacy-policy label {
       display: block; }
     .form-container > form .privacy-policy a {
