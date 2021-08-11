@@ -1325,6 +1325,8 @@ q {
       color: #FFFFFF;
       font-weight: bold; }
     .form-container > form .submit-area input.button {
+      appearance: none;
+      -webkit-appearance: none;
       height: 44px;
       outline: none;
       border: none;
