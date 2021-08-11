@@ -45,9 +45,33 @@
 .why-front-image
   display: grid
   grid-template-columns: 30px auto 30px
+  position: relative
   img
     grid-column: 1 / -1
     width: 100%
+  .player-layer
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    .play-container
+      background-color: #FFFFFF
+      height: 60px
+      width: 60px
+      border-radius: 50%
+      box-shadow: 0 3px 12px rgba(32,32,35,.2)
+      display: flex
+      align-items: center
+      justify-content: center
+      i
+        position: relative
+        top: 2px
+        left: 2px
+
 
 @media (min-width: $tablet_regular_screen) AND (max-width: $desktop_regular_screen_max)
   .why-front-bullets-list

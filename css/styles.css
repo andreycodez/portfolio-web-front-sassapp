@@ -913,10 +913,6 @@ q {
       opacity: 1;
       transform: translateY(-574px); } } }
 @media (max-width: 1024px) {
-  .banner-one-container {
-    display: flex;
-    flex-direction: column; }
-
   .banner-one-image > img {
     height: 360px; } }
 @media (max-width: 1023px) {
@@ -1006,10 +1002,33 @@ q {
 
 .why-front-image {
   display: grid;
-  grid-template-columns: 30px auto 30px; }
+  grid-template-columns: 30px auto 30px;
+  position: relative; }
   .why-front-image img {
     grid-column: 1/-1;
     width: 100%; }
+  .why-front-image .player-layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .why-front-image .player-layer .play-container {
+      background-color: #FFFFFF;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      box-shadow: 0 3px 12px rgba(32, 32, 35, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .why-front-image .player-layer .play-container i {
+        position: relative;
+        top: 2px;
+        left: 2px; }
 
 @media (min-width: 720px) and (max-width: 1199px) {
   .why-front-bullets-list {
