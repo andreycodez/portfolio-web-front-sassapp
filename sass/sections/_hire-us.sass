@@ -76,15 +76,30 @@ q
       text-decoration: none
       color: $text-color-regular
       border-bottom: 1px dashed $text-color-regular
-  .submit-button
+  .submit-area
     grid-column: span 2
-    height: 40px
-    background-color: $main-color-blue
-    outline: none
-    border: none
-    border-radius: 5px
-    color: #FFFFFF
-    font-weight: bold
+    width: 100%
+    display: flex
+    justify-content: center
+    .submit-button
+      grid-column: span 2
+      height: 40px
+      background-color: $main-color-blue
+      outline: none
+      border: none
+      border-radius: 5px
+      color: #FFFFFF
+      font-weight: bold
+    input.button
+      height: 44px
+      outline: none
+      border: none
+      background-color: $main-color-blue
+      border-radius: 22px
+      padding: 0 20px
+      display: flex
+      align-items: center
+      justify-content: center
   .select-field
     grid-column: span 1
     height: 40px
@@ -165,7 +180,7 @@ q
         grid-column: span 1
         display: grid
         grid-template-columns: 30px 1fr
-      .submit-button
+      .submit-area
         grid-column: span 1
       .select-field
         grid-column: span 1

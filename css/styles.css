@@ -1276,15 +1276,30 @@ q {
       text-decoration: none;
       color: #677788;
       border-bottom: 1px dashed #677788; }
-  .form-container > form .submit-button {
+  .form-container > form .submit-area {
     grid-column: span 2;
-    height: 40px;
-    background-color: #2576FF;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    color: #FFFFFF;
-    font-weight: bold; }
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .form-container > form .submit-area .submit-button {
+      grid-column: span 2;
+      height: 40px;
+      background-color: #2576FF;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      color: #FFFFFF;
+      font-weight: bold; }
+    .form-container > form .submit-area input.button {
+      height: 44px;
+      outline: none;
+      border: none;
+      background-color: #2576FF;
+      border-radius: 22px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
   .form-container > form .select-field {
     grid-column: span 1;
     height: 40px;
@@ -1363,7 +1378,7 @@ q {
         grid-column: span 1;
         display: grid;
         grid-template-columns: 30px 1fr; }
-      .hire-us-form form .submit-button {
+      .hire-us-form form .submit-area {
         grid-column: span 1; }
       .hire-us-form form .select-field {
         grid-column: span 1; } }
