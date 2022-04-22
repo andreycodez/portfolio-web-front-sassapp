@@ -47,15 +47,17 @@
   display: flex
   flex-direction: row
 
+@include fa-icon()
+
 .footer-breadcrumb-item
   display: grid
   grid-auto-flow: column
   grid-template-columns: min-content 15px
   gap: 10px
   &::after
-    font-family: "Font Awesome 5 Pro"
-    font-weight: 100
+    font-family: "Font Awesome 5 Free"
     content: "\f105"
+    font-weight: 400
     color: #677788
   &:last-child::after
     content: unset
